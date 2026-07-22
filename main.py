@@ -73,8 +73,10 @@ extra text) in exactly this structure:
 
 Field rules:
 - "rating": your honest 1-5 assessment of this specific photo.
-- "verdict": max 140 characters, 1-2 sentences, opinionated. Reference \
-actual details in the image, not generic praise or criticism.
+- "verdict": 1-2 sentences, opinionated. Aim for under 180 characters — \
+200 is a hard cap, so if you're close to it, trim rather than add another \
+clause. Reference actual details in the image, not generic praise or \
+criticism.
 - "next_action.type": exactly one of "keep", "enhance", "add_to_story", \
 "retake", "archive". This choice MUST follow logically from what you just \
 said in "verdict" — never pick an action that contradicts or ignores the \
@@ -170,7 +172,7 @@ class NextAction(BaseModel):
 
 class FeedbackResponse(BaseModel):
     rating: int = Field(..., ge=1, le=5)
-    verdict: str = Field(..., max_length=140)
+    verdict: str = Field(..., max_length=220)
     next_action: NextAction
     category_tag: str
 
@@ -318,7 +320,8 @@ be empty. Do not pad this list — only include a photo if it's truly \
 weak (blurry, redundant, poorly exposed).
 - "summary": ONE concise, opinionated sentence naming a pattern across \
 the set the person could act on (e.g. a recurring lighting or framing \
-issue), under 200 characters. Not a lesson — a decision.
+issue), aim for under 220 characters — 260 is a hard cap. Not a lesson — a \
+decision.
 
 You are NOT a photography teacher. Do not explain technique. Do not \
 write essays. Calm, premium, quietly confident — never cartoonish, \
@@ -345,7 +348,7 @@ class BatchVerdict(BaseModel):
     most_social_index: int
     weakest_index: int
     delete_indices: List[int]
-    summary: str = Field(..., max_length=200)
+    summary: str = Field(..., max_length=260)
 
 
 def build_fallback_batch_verdict(n: int) -> BatchVerdict:

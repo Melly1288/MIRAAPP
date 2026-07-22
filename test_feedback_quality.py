@@ -22,7 +22,7 @@ import anthropic
 
 # Reuse the same prompt and model as main.py so this test reflects
 # exactly what the real endpoint will do.
-from main import MODEL, SYSTEM_PROMPT, build_media_type, parse_feedback_json
+from main import MODEL, SYSTEM_PROMPT, build_media_type, parse_feedback_json, FeedbackResponse
 
 IMAGE_EXTENSIONS = {".jpg", ".jpeg", ".png", ".webp", ".heic"}
 
@@ -80,15 +80,18 @@ def run_test(folder_path: str):
         print(f"\nPhoto: {photo_path.name}")
         try:
             feedback = parse_feedback_json(raw_text)
-            stars = "★" * feedback["rating"] + "☆" * (5 - feedback["rating"])
-            next_action = feedback["next_action"]
-            print(f"  Rating:       {stars} ({feedback['rating']}/5)")
-            print(f"  Verdict:      {feedback['verdict']}")
-            print(f"  Next action:  [{next_action['type']}] {next_action['label']}")
-            print(f"  Category:     {feedback['category_tag']}")
+            # Construct the real response model, not just parse the dict —
+            # this catches length/type errors the live endpoint would hit
+            # (e.g. verdict exceeding max_length) that dict-only checks miss.
+            validated = FeedbackResponse(**feedback)
+            stars = "★" * validated.rating + "☆" * (5 - validated.rating)
+            print(f"  Rating:       {stars} ({validated.rating}/5)")
+            print(f"  Verdict:      {validated.verdict} ({len(validated.verdict)} chars)")
+            print(f"  Next action:  [{validated.next_action.type.value}] {validated.next_action.label}")
+            print(f"  Category:     {validated.category_tag}")
         except ValueError as exc:
             parse_failures += 1
-            print(f"  [PARSE FAILED] {exc}")
+            print(f"  [VALIDATION FAILED] {exc}")
 
         total_input_tokens += response.usage.input_tokens
         total_output_tokens += response.usage.output_tokens
