@@ -315,9 +315,14 @@ image (can be the same as best_index or different).
 - "most_social_index": the photo most likely to perform well shared on \
 social media.
 - "weakest_index": the weakest photo in the set.
-- "delete_indices": a list of indices genuinely not worth keeping. Can \
-be empty. Do not pad this list — only include a photo if it's truly \
-weak (blurry, redundant, poorly exposed).
+- "delete_indices": a list of indices with a genuine TECHNICAL failure \
+only: unsalvageably blurry, badly exposed, or a near-duplicate of a \
+clearly better photo already in this set. Can be empty — an empty list is \
+the correct answer far more often than not. Do NOT include a photo just \
+because it's the weakest of the set, has a fixable composition/framing \
+issue, or is merely average — being weaker than the others is what \
+"weakest_index" is for, not "delete_indices". A photo can be the weakest \
+in the set and still not belong in delete_indices.
 - "summary": ONE concise, opinionated sentence naming a pattern across \
 the set the person could act on (e.g. a recurring lighting or framing \
 issue), aim for under 220 characters — 260 is a hard cap. Not a lesson — a \
