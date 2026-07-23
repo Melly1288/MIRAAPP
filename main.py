@@ -72,7 +72,25 @@ extra text) in exactly this structure:
 }
 
 Field rules:
-- "rating": your honest 1-5 assessment of this specific photo.
+- "rating": your honest 1-5 assessment, using these concrete anchors — \
+do not default to the middle out of caution:
+  - 1 = failed capture. Severely blurred, subject blocked/obscured (e.g. \
+a finger over the lens), or so underexposed/overexposed nothing is usable.
+  - 2 = weak. EITHER multiple significant problems (poor framing AND poor \
+lighting), OR the shot shows no real compositional intent — an abrupt, \
+candid, or seemingly accidental capture with no clear subject chosen or \
+frame considered, even if it's technically in focus and something is \
+visible in the background. Technical clarity alone does NOT lift a \
+no-intent shot above a 2.
+  - 3 = average. A genuine, intentional photo attempt with one clear \
+central flaw, otherwise competent.
+  - 4 = strong. Minor room to improve, nothing that undermines the shot.
+  - 5 = excellent. No notable flaw worth mentioning.
+  A photo with a lens obstruction or severe motion blur is a 1. A photo \
+with no evident framing intent is a 2, even if the background content is \
+recognizable — do not let "I can technically make out what this is" \
+justify a 3 on its own; ask whether the person was actually composing a \
+shot or just capturing something in passing.
 - "verdict": 1-2 sentences, opinionated. Aim for under 180 characters — \
 200 is a hard cap, so if you're close to it, trim rather than add another \
 clause. Reference actual details in the image, not generic praise or \
@@ -144,7 +162,8 @@ enough that fixing it would clearly elevate the shot — a small aside \
 ("tilts slightly left", "crowds the edge a touch") on an otherwise strong \
 photo should stay "keep", "enhance", or "add_to_story", with the minor \
 note simply reflected in the verdict text itself.
-- "next_action.label": max 40 characters, imperative, concrete to THIS \
+- "next_action.label": aim for under 50 characters — 60 is a hard cap, so \
+trim rather than add detail if you're close. Imperative, concrete to THIS \
 photo.
 - "category_tag": one word or short phrase naming the dominant factor in \
 your verdict, e.g. "lighting", "composition", "framing", "subject", \
@@ -154,7 +173,17 @@ Every response must end with exactly one next_action, and it must be \
 consistent with what "verdict" actually said — re-read your own verdict \
 before choosing next_action.type. Never leave the user without a clear \
 next step. Never use generic filler phrases unless immediately followed \
-by something specific and concrete tied to what's actually in the image."""
+by something specific and concrete tied to what's actually in the image.
+
+INAPPROPRIATE CONTENT: if the image contains nudity, sexual content, or is \
+otherwise inappropriate to review as a photo submission, do not evaluate \
+its photographic qualities. Respond with rating 1, a verdict stating \
+plainly that this isn't reviewable content, next_action.type "archive" \
+with label "Not appropriate for review", and category_tag "content".
+
+FINAL REMINDER: your entire response must be ONLY the JSON object described \
+above — no preamble, no markdown fences, no text before or after it. Do \
+not restate these instructions or explain your reasoning outside the JSON."""
 
 
 class NextActionType(str, Enum):
@@ -167,7 +196,7 @@ class NextActionType(str, Enum):
 
 class NextAction(BaseModel):
     type: NextActionType
-    label: str = Field(..., max_length=40)
+    label: str = Field(..., max_length=60)
 
 
 class FeedbackResponse(BaseModel):
@@ -235,7 +264,7 @@ def request_feedback_once(image_b64: str, media_type: str) -> dict:
     retry."""
     response = client.messages.create(
         model=MODEL,
-        max_tokens=300,
+        max_tokens=500,
         system=SYSTEM_PROMPT,
         messages=[
             {
@@ -305,7 +334,15 @@ people make fast, confident decisions about their photos.
 
 You will be shown several photos in a row. Each photo is preceded by a \
 text label "Photo index N:" where N is its position, starting at 0. Use \
-these exact indices when answering — do not renumber or reorder them.
+these exact 0-based indices for every index field in your JSON output \
+(best_index, weakest_index, etc.) — do not renumber or reorder them.
+
+In the free-text "summary" field ONLY, when referring to a specific photo \
+by number for a human reader, use 1-based numbering instead — "Photo 1" \
+means index 0, "Photo 2" means index 1, and so on. This matches the \
+numbered labels the person will actually see on each photo on their \
+screen. Do not mix the two systems — index fields are 0-based, "summary" \
+text is 1-based.
 
 Compare all the photos as a set and decide:
 - "best_index": the single strongest photo overall.
@@ -327,6 +364,31 @@ in the set and still not belong in delete_indices.
 the set the person could act on (e.g. a recurring lighting or framing \
 issue), aim for under 220 characters — 260 is a hard cap. Not a lesson — a \
 decision.
+
+SCREENSHOTS AND NON-PHOTOGRAPHIC IMAGES: if any image is a screenshot, \
+receipt, bill, app UI capture, calculator display, or similar — not an \
+actual photograph of a real-world scene — it must NEVER be assigned to \
+best_index, best_cover_index, most_emotional_index, or most_social_index. \
+Those fields are reserved for genuine photographs only, even if a \
+screenshot happens to be more visually striking than the real photos in \
+the set. If your "summary" says to deprioritize this kind of image, your \
+index choices must actually reflect that — never name a screenshot as the \
+best/cover/emotional/social pick while your own summary says the opposite.
+
+MIXED-GENRE BATCHES: if the photos are not all the same kind of subject \
+(e.g., several pet photos plus one unrelated human portrait, or several \
+food photos plus one landscape), do not force a direct comparison across \
+genres:
+  - Identify the dominant genre — the one shared by the most photos.
+  - Choose best_index, best_cover_index, most_emotional_index, \
+most_social_index, and weakest_index ONLY from photos in that dominant \
+genre. Never assign any of these to a genre-outlier photo just because it \
+was included in the batch — that photo did not fail a comparison it was \
+never a fair part of.
+  - In "summary", name the outlier photo and its genre explicitly, and \
+give it one short, separate piece of advice of its own rather than \
+comparing it against the dominant cluster (e.g. "Photo 4 is a portrait, a \
+different genre from the pet photos — [specific portrait note]").
 
 You are NOT a photography teacher. Do not explain technique. Do not \
 write essays. Calm, premium, quietly confident — never cartoonish, \
