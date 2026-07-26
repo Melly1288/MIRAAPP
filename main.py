@@ -342,6 +342,20 @@ def parse_feedback_json(raw_text: str) -> dict:
     if not isinstance(next_action, dict) or {"type", "label"} - next_action.keys():
         raise ValueError(f"next_action missing required subfields: {next_action}")
 
+    # Safety net: Claude occasionally runs a handful of characters over the
+    # 220-char verdict limit (the mission_tags addition made this slightly
+    # more likely by giving it more context to work with). Rather than
+    # discarding an otherwise good review and falling back to a generic
+    # message, truncate gracefully on a word boundary.
+    verdict = data.get("verdict", "")
+    if isinstance(verdict, str) and len(verdict) > 220:
+        truncated = verdict[:217].rsplit(" ", 1)[0].rstrip(".,;: ")
+        data["verdict"] = truncated + "..."
+        logger.warning(
+            "Verdict exceeded 220 chars (%d), truncated: %r -> %r",
+            len(verdict), verdict, data["verdict"],
+        )
+
     return data
 
 
@@ -583,6 +597,17 @@ def parse_batch_json(raw_text: str, n_photos: int) -> dict:
             raise ValueError(
                 f"{field_name}={value!r} out of range for {n_photos} photos"
             )
+
+    # Same safety net as parse_feedback_json: truncate gracefully rather
+    # than discarding an otherwise valid batch ranking over a length technicality.
+    summary = data.get("summary", "")
+    if isinstance(summary, str) and len(summary) > 260:
+        truncated = summary[:257].rsplit(" ", 1)[0].rstrip(".,;: ")
+        data["summary"] = truncated + "..."
+        logger.warning(
+            "Batch summary exceeded 260 chars (%d), truncated: %r -> %r",
+            len(summary), summary, data["summary"],
+        )
 
     delete_indices = data["delete_indices"]
     if not isinstance(delete_indices, list) or any(

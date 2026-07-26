@@ -9,6 +9,8 @@ This field is used for a separate gamified mission-tracking feature and
 must never influence your rating, verdict, or next_action - grade the
 photo's quality exactly as you already do, then separately note which of
 these descriptive tags apply, independent of whether the photo is good.
+Your verdict must still stay under 220 characters exactly as instructed
+above - this mission-tagging addition changes nothing about that limit.
 
 Available tags (tag: what it means):
 - perfectly_round: Find something perfectly round
