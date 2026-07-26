@@ -54,6 +54,15 @@ client = anthropic.Anthropic(api_key=os.environ.get("ANTHROPIC_API_KEY"))
 OPENAI_API_KEY = os.environ.get("OPENAI_API_KEY")
 OPENAI_MODERATION_URL = "https://api.openai.com/v1/moderations"
 
+# Off by default. The OpenAI moderation pre-check costs real API calls and
+# was hitting 429 rate-limit errors without billing configured. Claude's
+# own SYSTEM_PROMPT already has a fallback instruction for inappropriate
+# content ("INAPPROPRIATE CONTENT:" section below), so this isn't the only
+# safeguard - just no longer a pre-filter in front of Claude. Flip back on
+# later by setting MODERATION_ENABLED=true in Render's Environment tab,
+# once OpenAI billing/limits are sorted - no code changes needed.
+MODERATION_ENABLED = os.environ.get("MODERATION_ENABLED", "false").lower() == "true"
+
 MODEL = "claude-haiku-4-5-20251001"
 
 # Batch review (Phase 2). Bounds chosen for Render free-tier request
@@ -383,17 +392,18 @@ async def get_feedback(photo: UploadFile = File(...)):
     media_type = build_media_type(photo.filename or "", photo.content_type)
     image_b64 = base64.standard_b64encode(image_bytes).decode("utf-8")
 
-    try:
-        flagged = check_image_moderation(image_b64, media_type)
-    except Exception as exc:
-        # Fail CLOSED: if we can't confirm this image is safe, we do not
-        # forward it to Claude at all.
-        logger.error("Moderation check failed, failing closed: %s", exc)
-        return MODERATION_UNAVAILABLE_FEEDBACK
+    if MODERATION_ENABLED:
+        try:
+            flagged = check_image_moderation(image_b64, media_type)
+        except Exception as exc:
+            # Fail CLOSED: if we can't confirm this image is safe, we do not
+            # forward it to Claude at all.
+            logger.error("Moderation check failed, failing closed: %s", exc)
+            return MODERATION_UNAVAILABLE_FEEDBACK
 
-    if flagged:
-        logger.warning("Image blocked by moderation gate before reaching Claude")
-        return CONTENT_DECLINED_FEEDBACK
+        if flagged:
+            logger.warning("Image blocked by moderation gate before reaching Claude")
+            return CONTENT_DECLINED_FEEDBACK
 
     last_error: Optional[Exception] = None
 
@@ -661,22 +671,24 @@ async def review_batch(photos: List[UploadFile] = File(...)):
     # the whole batch is rejected rather than silently dropping just the
     # one problem photo - this avoids the complexity (and risk) of
     # re-mapping indices for a partially-filtered batch, and fails CLOSED
-    # if we can't confirm safety at all.
-    for position, (media_type, image_b64) in enumerate(images, start=1):
-        try:
-            flagged = check_image_moderation(image_b64, media_type)
-        except Exception as exc:
-            logger.error("Moderation check failed for batch photo %d, failing closed: %s", position, exc)
-            raise HTTPException(
-                status_code=503,
-                detail="Mira couldn't confirm these photos are safe to review right now — please try again in a moment.",
-            )
-        if flagged:
-            logger.warning("Batch photo %d blocked by moderation gate before reaching Claude", position)
-            raise HTTPException(
-                status_code=400,
-                detail=f"Photo {position} isn't appropriate for review. Please remove it and resubmit the batch.",
-            )
+    # if we can't confirm safety at all. Skipped entirely when
+    # MODERATION_ENABLED is false (see definition near the top of the file).
+    if MODERATION_ENABLED:
+        for position, (media_type, image_b64) in enumerate(images, start=1):
+            try:
+                flagged = check_image_moderation(image_b64, media_type)
+            except Exception as exc:
+                logger.error("Moderation check failed for batch photo %d, failing closed: %s", position, exc)
+                raise HTTPException(
+                    status_code=503,
+                    detail="Mira couldn't confirm these photos are safe to review right now — please try again in a moment.",
+                )
+            if flagged:
+                logger.warning("Batch photo %d blocked by moderation gate before reaching Claude", position)
+                raise HTTPException(
+                    status_code=400,
+                    detail=f"Photo {position} isn't appropriate for review. Please remove it and resubmit the batch.",
+                )
 
     last_error: Optional[Exception] = None
 
