@@ -3,3 +3,4 @@ uvicorn[standard]
 anthropic
 python-multipart
 pydantic
+requests
