@@ -18,9 +18,13 @@ from enum import Enum
 from typing import List, Optional
 
 import anthropic
+import requests
 from fastapi import FastAPI, File, HTTPException, UploadFile
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel, Field
+
+from mission_tags_prompt_snippet import MISSION_TAGS_PROMPT_ADDITION
+from missions_router import router as missions_router
 
 logger = logging.getLogger("mira")
 
@@ -35,7 +39,20 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+# Mission Cards endpoints: GET /missions/library, POST /missions/evaluate.
+# Fully additive — does not touch /feedback or /review-batch's core logic.
+app.include_router(missions_router)
+
 client = anthropic.Anthropic(api_key=os.environ.get("ANTHROPIC_API_KEY"))
+
+# Content-safety gate: every image is checked here BEFORE it ever reaches
+# Claude's vision review. This is a categorical block on nudity/sexual
+# content (regardless of who's depicted) — it is not, and cannot be, a
+# CSAM detector; general moderation APIs explicitly do not claim that
+# capability. Blocking the whole category sidesteps needing to build any
+# kind of age-classification, which is not something to attempt here.
+OPENAI_API_KEY = os.environ.get("OPENAI_API_KEY")
+OPENAI_MODERATION_URL = "https://api.openai.com/v1/moderations"
 
 MODEL = "claude-haiku-4-5-20251001"
 
@@ -68,7 +85,8 @@ extra text) in exactly this structure:
     "type": "keep" | "enhance" | "add_to_story" | "retake" | "archive",
     "label": string
   },
-  "category_tag": string
+  "category_tag": string,
+  "mission_tags": [string, ...]
 }
 
 Field rules:
@@ -185,6 +203,12 @@ FINAL REMINDER: your entire response must be ONLY the JSON object described \
 above — no preamble, no markdown fences, no text before or after it. Do \
 not restate these instructions or explain your reasoning outside the JSON."""
 
+# Additive only — appended after the tuned prompt above rather than woven
+# into it, so none of the rating/verdict/next_action calibration above is
+# touched. Regenerate this block with generate_prompt_snippet.py whenever
+# missions_data.json changes (e.g. Phase 2 activating the "rare" tier).
+SYSTEM_PROMPT = SYSTEM_PROMPT + "\n\n" + MISSION_TAGS_PROMPT_ADDITION
+
 
 class NextActionType(str, Enum):
     KEEP = "keep"
@@ -204,6 +228,7 @@ class FeedbackResponse(BaseModel):
     verdict: str = Field(..., max_length=220)
     next_action: NextAction
     category_tag: str
+    mission_tags: List[str] = Field(default_factory=list)
 
 
 # Shown only if Claude's response fails validation twice in a row (rare —
@@ -216,6 +241,59 @@ FALLBACK_FEEDBACK = FeedbackResponse(
     next_action=NextAction(type=NextActionType.KEEP, label="Try again later"),
     category_tag="unknown",
 )
+
+# Shown when the moderation gate (below) flags an image as sexual/nudity
+# content. Claude never sees this image at all — the gate blocks it first.
+CONTENT_DECLINED_FEEDBACK = FeedbackResponse(
+    rating=1,
+    verdict="This is explicit sexual content that I'm not able to review or provide feedback on.",
+    next_action=NextAction(type=NextActionType.ARCHIVE, label="Not appropriate for review"),
+    category_tag="content",
+)
+
+# Shown when the moderation check itself fails (network error, bad key,
+# etc) rather than returning a clear result. We fail CLOSED here — if we
+# can't confirm an image is safe, we do not forward it to Claude, full
+# stop. This is deliberately a distinct message from CONTENT_DECLINED_FEEDBACK:
+# we don't know this image is inappropriate, only that we couldn't check.
+# Reuses category_tag "unknown" so it gets the same no-stars, "Try Again"
+# treatment the app already has for the Claude-side fallback case.
+MODERATION_UNAVAILABLE_FEEDBACK = FeedbackResponse(
+    rating=3,
+    verdict="Mira couldn't confirm this photo is safe to review right now — please try again in a moment.",
+    next_action=NextAction(type=NextActionType.KEEP, label="Try again later"),
+    category_tag="unknown",
+)
+
+
+def check_image_moderation(image_b64: str, media_type: str) -> bool:
+    """Calls OpenAI's free moderation endpoint. Returns True if the image
+    was flagged (sexual content, etc). Raises on any failure (network,
+    bad key, unexpected response shape) so the caller can decide to fail
+    closed rather than silently letting an unchecked image through."""
+    if not OPENAI_API_KEY:
+        raise RuntimeError("OPENAI_API_KEY is not configured")
+
+    response = requests.post(
+        OPENAI_MODERATION_URL,
+        headers={
+            "Authorization": f"Bearer {OPENAI_API_KEY}",
+            "Content-Type": "application/json",
+        },
+        json={
+            "model": "omni-moderation-latest",
+            "input": [
+                {
+                    "type": "image_url",
+                    "image_url": {"url": f"data:{media_type};base64,{image_b64}"},
+                }
+            ],
+        },
+        timeout=15,
+    )
+    response.raise_for_status()
+    data = response.json()
+    return bool(data["results"][0]["flagged"])
 
 
 def build_media_type(filename: str, content_type: Optional[str]) -> str:
@@ -304,6 +382,18 @@ async def get_feedback(photo: UploadFile = File(...)):
 
     media_type = build_media_type(photo.filename or "", photo.content_type)
     image_b64 = base64.standard_b64encode(image_bytes).decode("utf-8")
+
+    try:
+        flagged = check_image_moderation(image_b64, media_type)
+    except Exception as exc:
+        # Fail CLOSED: if we can't confirm this image is safe, we do not
+        # forward it to Claude at all.
+        logger.error("Moderation check failed, failing closed: %s", exc)
+        return MODERATION_UNAVAILABLE_FEEDBACK
+
+    if flagged:
+        logger.warning("Image blocked by moderation gate before reaching Claude")
+        return CONTENT_DECLINED_FEEDBACK
 
     last_error: Optional[Exception] = None
 
@@ -404,8 +494,15 @@ extra text) in exactly this structure:
   "most_social_index": integer,
   "weakest_index": integer,
   "delete_indices": [integer, ...],
-  "summary": string
-}"""
+  "summary": string,
+  "photo_mission_tags": [[string, ...], [string, ...], ...]
+}
+
+"photo_mission_tags" is additive and does not affect any ranking field \
+above: one array per photo, in the same order/index as the photos shown, \
+each containing zero or more tags from the controlled mission-tag list \
+below (used for a separate gamified feature, independent of this photo's \
+ranking or quality).""" + MISSION_TAGS_PROMPT_ADDITION
 
 
 class BatchVerdict(BaseModel):
@@ -416,6 +513,7 @@ class BatchVerdict(BaseModel):
     weakest_index: int
     delete_indices: List[int]
     summary: str = Field(..., max_length=260)
+    photo_mission_tags: List[List[str]] = Field(default_factory=list)
 
 
 def build_fallback_batch_verdict(n: int) -> BatchVerdict:
@@ -482,6 +580,21 @@ def parse_batch_json(raw_text: str, n_photos: int) -> dict:
     ):
         raise ValueError(f"delete_indices out of range: {delete_indices!r}")
 
+    # photo_mission_tags is additive/optional — a malformed or missing value
+    # here should never fail an otherwise-valid ranking response, so we
+    # normalize rather than raise.
+    raw_tags = data.get("photo_mission_tags")
+    if (
+        isinstance(raw_tags, list)
+        and len(raw_tags) == n_photos
+        and all(isinstance(t, list) for t in raw_tags)
+    ):
+        data["photo_mission_tags"] = [
+            [str(tag) for tag in photo_tags] for photo_tags in raw_tags
+        ]
+    else:
+        data["photo_mission_tags"] = [[] for _ in range(n_photos)]
+
     return data
 
 
@@ -542,6 +655,28 @@ async def review_batch(photos: List[UploadFile] = File(...)):
         media_type = build_media_type(photo.filename or "", photo.content_type)
         image_b64 = base64.standard_b64encode(image_bytes).decode("utf-8")
         images.append((media_type, image_b64))
+
+    # Content-safety gate: every image is checked BEFORE any of them reach
+    # Claude. If any single photo is flagged, or the check itself fails,
+    # the whole batch is rejected rather than silently dropping just the
+    # one problem photo - this avoids the complexity (and risk) of
+    # re-mapping indices for a partially-filtered batch, and fails CLOSED
+    # if we can't confirm safety at all.
+    for position, (media_type, image_b64) in enumerate(images, start=1):
+        try:
+            flagged = check_image_moderation(image_b64, media_type)
+        except Exception as exc:
+            logger.error("Moderation check failed for batch photo %d, failing closed: %s", position, exc)
+            raise HTTPException(
+                status_code=503,
+                detail="Mira couldn't confirm these photos are safe to review right now — please try again in a moment.",
+            )
+        if flagged:
+            logger.warning("Batch photo %d blocked by moderation gate before reaching Claude", position)
+            raise HTTPException(
+                status_code=400,
+                detail=f"Photo {position} isn't appropriate for review. Please remove it and resubmit the batch.",
+            )
 
     last_error: Optional[Exception] = None
 

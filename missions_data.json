@@ -1,0 +1,4506 @@
+{
+  "version": 1,
+  "difficulty_xp": {
+    "common": 10,
+    "uncommon": 20,
+    "rare": 40,
+    "legendary": 80
+  },
+  "skill_paths": [
+    "explorer",
+    "observer",
+    "composer",
+    "light_chaser",
+    "storyteller",
+    "visual_artist",
+    "master_photographer"
+  ],
+  "missions": [
+    {
+      "mission_id": "EVERYDAY_OBJECT_HUNTS_PERFECTLY_ROUND",
+      "category": "everyday_object_hunts",
+      "skill_path": "explorer",
+      "hidden_name": "Perfectly Round",
+      "player_hint": "Find something perfectly round",
+      "difficulty": "common",
+      "xp": 10,
+      "pool": "core",
+      "active": true,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "perfectly_round"
+        ],
+        "match_mode": "any",
+        "min_rating": null
+      },
+      "trigger_condition": null
+    },
+    {
+      "mission_id": "EVERYDAY_OBJECT_HUNTS_BELONGS_TOGETHER",
+      "category": "everyday_object_hunts",
+      "skill_path": "explorer",
+      "hidden_name": "Belongs Together",
+      "player_hint": "Two objects that belong together",
+      "difficulty": "common",
+      "xp": 10,
+      "pool": "core",
+      "active": true,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "belongs_together"
+        ],
+        "match_mode": "any",
+        "min_rating": null
+      },
+      "trigger_condition": null
+    },
+    {
+      "mission_id": "EVERYDAY_OBJECT_HUNTS_PERFECT_PAIR",
+      "category": "everyday_object_hunts",
+      "skill_path": "explorer",
+      "hidden_name": "Perfect Pair",
+      "player_hint": "Two identical objects",
+      "difficulty": "common",
+      "xp": 10,
+      "pool": "core",
+      "active": true,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "perfect_pair"
+        ],
+        "match_mode": "any",
+        "min_rating": null
+      },
+      "trigger_condition": null
+    },
+    {
+      "mission_id": "EVERYDAY_OBJECT_HUNTS_SMALLEST_THING_HERE",
+      "category": "everyday_object_hunts",
+      "skill_path": "explorer",
+      "hidden_name": "Smallest Thing Here",
+      "player_hint": "The smallest object you can find",
+      "difficulty": "common",
+      "xp": 10,
+      "pool": "core",
+      "active": true,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "smallest_thing_here"
+        ],
+        "match_mode": "any",
+        "min_rating": null
+      },
+      "trigger_condition": null
+    },
+    {
+      "mission_id": "EVERYDAY_OBJECT_HUNTS_MULTIPLES",
+      "category": "everyday_object_hunts",
+      "skill_path": "explorer",
+      "hidden_name": "Multiples",
+      "player_hint": "Three or more of the same object",
+      "difficulty": "common",
+      "xp": 10,
+      "pool": "core",
+      "active": true,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "multiples"
+        ],
+        "match_mode": "any",
+        "min_rating": null
+      },
+      "trigger_condition": null
+    },
+    {
+      "mission_id": "EVERYDAY_OBJECT_HUNTS_WALKED_PAST_DAILY",
+      "category": "everyday_object_hunts",
+      "skill_path": "explorer",
+      "hidden_name": "Walked Past Daily",
+      "player_hint": "Something people walk past every day",
+      "difficulty": "uncommon",
+      "xp": 20,
+      "pool": "core",
+      "active": true,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "walked_past_daily"
+        ],
+        "match_mode": "any",
+        "min_rating": null
+      },
+      "trigger_condition": null
+    },
+    {
+      "mission_id": "EVERYDAY_OBJECT_HUNTS_TEXTURE_HUNTER",
+      "category": "everyday_object_hunts",
+      "skill_path": "explorer",
+      "hidden_name": "Texture Hunter",
+      "player_hint": "Something rough to the touch",
+      "difficulty": "uncommon",
+      "xp": 20,
+      "pool": "core",
+      "active": true,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "texture_hunter"
+        ],
+        "match_mode": "any",
+        "min_rating": null
+      },
+      "trigger_condition": null
+    },
+    {
+      "mission_id": "EVERYDAY_OBJECT_HUNTS_TINY_WORLD",
+      "category": "everyday_object_hunts",
+      "skill_path": "explorer",
+      "hidden_name": "Tiny World",
+      "player_hint": "Something so small you almost missed it",
+      "difficulty": "uncommon",
+      "xp": 20,
+      "pool": "core",
+      "active": true,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "tiny_world"
+        ],
+        "match_mode": "any",
+        "min_rating": null
+      },
+      "trigger_condition": null
+    },
+    {
+      "mission_id": "EVERYDAY_OBJECT_HUNTS_ONE_OF_A_KIND",
+      "category": "everyday_object_hunts",
+      "skill_path": "explorer",
+      "hidden_name": "One of a Kind",
+      "player_hint": "Something that looks unique in its surroundings",
+      "difficulty": "uncommon",
+      "xp": 20,
+      "pool": "core",
+      "active": true,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "one_of_a_kind"
+        ],
+        "match_mode": "any",
+        "min_rating": null
+      },
+      "trigger_condition": null
+    },
+    {
+      "mission_id": "EVERYDAY_OBJECT_HUNTS_WORN_WITH_AGE",
+      "category": "everyday_object_hunts",
+      "skill_path": "explorer",
+      "hidden_name": "Worn With Age",
+      "player_hint": "Something that shows its age",
+      "difficulty": "uncommon",
+      "xp": 20,
+      "pool": "core",
+      "active": true,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "worn_with_age"
+        ],
+        "match_mode": "any",
+        "min_rating": null
+      },
+      "trigger_condition": null
+    },
+    {
+      "mission_id": "EVERYDAY_OBJECT_HUNTS_STACKED_UP",
+      "category": "everyday_object_hunts",
+      "skill_path": "explorer",
+      "hidden_name": "Stacked Up",
+      "player_hint": "Things stacked on top of each other",
+      "difficulty": "uncommon",
+      "xp": 20,
+      "pool": "core",
+      "active": true,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "stacked_up"
+        ],
+        "match_mode": "any",
+        "min_rating": null
+      },
+      "trigger_condition": null
+    },
+    {
+      "mission_id": "EVERYDAY_OBJECT_HUNTS_SOMETHING_SOFT",
+      "category": "everyday_object_hunts",
+      "skill_path": "explorer",
+      "hidden_name": "Something Soft",
+      "player_hint": "Something soft to the touch",
+      "difficulty": "uncommon",
+      "xp": 20,
+      "pool": "core",
+      "active": true,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "something_soft"
+        ],
+        "match_mode": "any",
+        "min_rating": null
+      },
+      "trigger_condition": null
+    },
+    {
+      "mission_id": "EVERYDAY_OBJECT_HUNTS_EVERYDAY_HERO",
+      "category": "everyday_object_hunts",
+      "skill_path": "explorer",
+      "hidden_name": "Everyday Hero",
+      "player_hint": "An object you use every day but never photograph",
+      "difficulty": "uncommon",
+      "xp": 20,
+      "pool": "core",
+      "active": true,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "everyday_hero"
+        ],
+        "match_mode": "any",
+        "min_rating": null
+      },
+      "trigger_condition": null
+    },
+    {
+      "mission_id": "EVERYDAY_OBJECT_HUNTS_ODD_ONE_OUT",
+      "category": "everyday_object_hunts",
+      "skill_path": "explorer",
+      "hidden_name": "Odd One Out",
+      "player_hint": "Something that doesn't belong",
+      "difficulty": "rare",
+      "xp": 40,
+      "pool": "core",
+      "active": false,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "odd_one_out"
+        ],
+        "match_mode": "any",
+        "min_rating": null
+      },
+      "trigger_condition": null
+    },
+    {
+      "mission_id": "EVERYDAY_OBJECT_HUNTS_HIDDEN_IN_PLAIN_SIGHT",
+      "category": "everyday_object_hunts",
+      "skill_path": "explorer",
+      "hidden_name": "Hidden in Plain Sight",
+      "player_hint": "Something camouflaged into its background",
+      "difficulty": "rare",
+      "xp": 40,
+      "pool": "core",
+      "active": false,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "hidden_in_plain_sight"
+        ],
+        "match_mode": "any",
+        "min_rating": null
+      },
+      "trigger_condition": null
+    },
+    {
+      "mission_id": "EVERYDAY_OBJECT_HUNTS_FUNCTION_OVER_FORM",
+      "category": "everyday_object_hunts",
+      "skill_path": "explorer",
+      "hidden_name": "Function Over Form",
+      "player_hint": "Something ordinary that's actually clever design",
+      "difficulty": "rare",
+      "xp": 40,
+      "pool": "core",
+      "active": false,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "function_over_form"
+        ],
+        "match_mode": "any",
+        "min_rating": null
+      },
+      "trigger_condition": null
+    },
+    {
+      "mission_id": "EVERYDAY_OBJECT_HUNTS_LEFT_BEHIND",
+      "category": "everyday_object_hunts",
+      "skill_path": "explorer",
+      "hidden_name": "Left Behind",
+      "player_hint": "Something someone forgot",
+      "difficulty": "rare",
+      "xp": 40,
+      "pool": "core",
+      "active": false,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "left_behind"
+        ],
+        "match_mode": "any",
+        "min_rating": null
+      },
+      "trigger_condition": null
+    },
+    {
+      "mission_id": "EVERYDAY_OBJECT_HUNTS_HANDMADE",
+      "category": "everyday_object_hunts",
+      "skill_path": "explorer",
+      "hidden_name": "Handmade",
+      "player_hint": "Something made by hand, not a machine",
+      "difficulty": "rare",
+      "xp": 40,
+      "pool": "core",
+      "active": false,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "handmade"
+        ],
+        "match_mode": "any",
+        "min_rating": null
+      },
+      "trigger_condition": null
+    },
+    {
+      "mission_id": "EVERYDAY_OBJECT_HUNTS_NATURE_MEETS_CITY",
+      "category": "everyday_object_hunts",
+      "skill_path": "explorer",
+      "hidden_name": "Nature Meets City",
+      "player_hint": "Where nature and city overlap",
+      "difficulty": "rare",
+      "xp": 40,
+      "pool": "core",
+      "active": false,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "nature_meets_city"
+        ],
+        "match_mode": "any",
+        "min_rating": null
+      },
+      "trigger_condition": null
+    },
+    {
+      "mission_id": "EVERYDAY_OBJECT_HUNTS_TIME_CAPSULE",
+      "category": "everyday_object_hunts",
+      "skill_path": "explorer",
+      "hidden_name": "Time Capsule",
+      "player_hint": "Something that looks the same as it did 20 years ago",
+      "difficulty": "rare",
+      "xp": 40,
+      "pool": "core",
+      "active": false,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "time_capsule"
+        ],
+        "match_mode": "any",
+        "min_rating": null
+      },
+      "trigger_condition": null
+    },
+    {
+      "mission_id": "EVERYDAY_OBJECT_HUNTS_FOUND_TREASURE",
+      "category": "everyday_object_hunts",
+      "skill_path": "explorer",
+      "hidden_name": "Found Treasure",
+      "player_hint": "Something you'd keep if you found it on the ground",
+      "difficulty": "rare",
+      "xp": 40,
+      "pool": "core",
+      "active": false,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "found_treasure"
+        ],
+        "match_mode": "any",
+        "min_rating": null
+      },
+      "trigger_condition": null
+    },
+    {
+      "mission_id": "EVERYDAY_OBJECT_HUNTS_THE_UNTOUCHED_CORNER",
+      "category": "everyday_object_hunts",
+      "skill_path": "explorer",
+      "hidden_name": "The Untouched Corner",
+      "player_hint": "Find a spot that looks like no one has noticed it in years",
+      "difficulty": "legendary",
+      "xp": 80,
+      "pool": "core",
+      "active": false,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "the_untouched_corner"
+        ],
+        "match_mode": "any",
+        "min_rating": 4
+      },
+      "trigger_condition": null
+    },
+    {
+      "mission_id": "EVERYDAY_OBJECT_HUNTS_SILENT_WITNESS",
+      "category": "everyday_object_hunts",
+      "skill_path": "explorer",
+      "hidden_name": "Silent Witness",
+      "player_hint": "An object that's \"seen\" more than any person nearby",
+      "difficulty": "legendary",
+      "xp": 80,
+      "pool": "core",
+      "active": false,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "silent_witness"
+        ],
+        "match_mode": "any",
+        "min_rating": 4
+      },
+      "trigger_condition": null
+    },
+    {
+      "mission_id": "EVERYDAY_OBJECT_HUNTS_DESIGN_YOU_NEVER_QUESTION",
+      "category": "everyday_object_hunts",
+      "skill_path": "explorer",
+      "hidden_name": "Design You Never Question",
+      "player_hint": "Something so well-designed you've never once thought about it",
+      "difficulty": "legendary",
+      "xp": 80,
+      "pool": "core",
+      "active": false,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "design_you_never_question"
+        ],
+        "match_mode": "any",
+        "min_rating": 4
+      },
+      "trigger_condition": null
+    },
+    {
+      "mission_id": "EVERYDAY_OBJECT_HUNTS_BEFORE_IT_EXISTED",
+      "category": "everyday_object_hunts",
+      "skill_path": "explorer",
+      "hidden_name": "Before It Existed",
+      "player_hint": "Something whose exact replacement no longer exists anywhere",
+      "difficulty": "legendary",
+      "xp": 80,
+      "pool": "core",
+      "active": false,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "before_it_existed"
+        ],
+        "match_mode": "any",
+        "min_rating": 4
+      },
+      "trigger_condition": null
+    },
+    {
+      "mission_id": "COMPOSITION_OFF_CENTRE",
+      "category": "composition",
+      "skill_path": "composer",
+      "hidden_name": "Off-Centre",
+      "player_hint": "Place your subject off-centre",
+      "difficulty": "common",
+      "xp": 10,
+      "pool": "core",
+      "active": true,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "off_centre"
+        ],
+        "match_mode": "any",
+        "min_rating": null
+      },
+      "trigger_condition": null
+    },
+    {
+      "mission_id": "COMPOSITION_FILL_THE_FRAME",
+      "category": "composition",
+      "skill_path": "composer",
+      "hidden_name": "Fill the Frame",
+      "player_hint": "Get so close your subject fills the whole photo",
+      "difficulty": "common",
+      "xp": 10,
+      "pool": "core",
+      "active": true,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "fill_the_frame"
+        ],
+        "match_mode": "any",
+        "min_rating": null
+      },
+      "trigger_condition": null
+    },
+    {
+      "mission_id": "COMPOSITION_REPEATING_PATTERN",
+      "category": "composition",
+      "skill_path": "composer",
+      "hidden_name": "Repeating Pattern",
+      "player_hint": "Find a repeating pattern",
+      "difficulty": "common",
+      "xp": 10,
+      "pool": "core",
+      "active": true,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "repeating_pattern"
+        ],
+        "match_mode": "any",
+        "min_rating": null
+      },
+      "trigger_condition": null
+    },
+    {
+      "mission_id": "COMPOSITION_CENTER_STAGE",
+      "category": "composition",
+      "skill_path": "composer",
+      "hidden_name": "Center Stage",
+      "player_hint": "Put your subject dead center on purpose",
+      "difficulty": "common",
+      "xp": 10,
+      "pool": "core",
+      "active": true,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "center_stage"
+        ],
+        "match_mode": "any",
+        "min_rating": null
+      },
+      "trigger_condition": null
+    },
+    {
+      "mission_id": "COMPOSITION_DOORWAY_FRAME",
+      "category": "composition",
+      "skill_path": "composer",
+      "hidden_name": "Doorway Frame",
+      "player_hint": "Frame a scene using a door or window",
+      "difficulty": "common",
+      "xp": 10,
+      "pool": "core",
+      "active": true,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "doorway_frame"
+        ],
+        "match_mode": "any",
+        "min_rating": null
+      },
+      "trigger_condition": null
+    },
+    {
+      "mission_id": "COMPOSITION_LEADING_LINES",
+      "category": "composition",
+      "skill_path": "composer",
+      "hidden_name": "Leading Lines",
+      "player_hint": "Find lines that lead the eye somewhere",
+      "difficulty": "uncommon",
+      "xp": 20,
+      "pool": "core",
+      "active": true,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "leading_lines"
+        ],
+        "match_mode": "any",
+        "min_rating": null
+      },
+      "trigger_condition": null
+    },
+    {
+      "mission_id": "COMPOSITION_THROUGH_THE_FRAME",
+      "category": "composition",
+      "skill_path": "composer",
+      "hidden_name": "Through the Frame",
+      "player_hint": "Photograph through something (window, gap, branches)",
+      "difficulty": "uncommon",
+      "xp": 20,
+      "pool": "core",
+      "active": true,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "through_the_frame"
+        ],
+        "match_mode": "any",
+        "min_rating": null
+      },
+      "trigger_condition": null
+    },
+    {
+      "mission_id": "COMPOSITION_NEGATIVE_SPACE",
+      "category": "composition",
+      "skill_path": "composer",
+      "hidden_name": "Negative Space",
+      "player_hint": "Use empty space to make your subject stand out",
+      "difficulty": "uncommon",
+      "xp": 20,
+      "pool": "core",
+      "active": true,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "negative_space"
+        ],
+        "match_mode": "any",
+        "min_rating": null
+      },
+      "trigger_condition": null
+    },
+    {
+      "mission_id": "COMPOSITION_DIAGONAL_STORY",
+      "category": "composition",
+      "skill_path": "composer",
+      "hidden_name": "Diagonal Story",
+      "player_hint": "Find a diagonal line running through your shot",
+      "difficulty": "uncommon",
+      "xp": 20,
+      "pool": "core",
+      "active": true,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "diagonal_story"
+        ],
+        "match_mode": "any",
+        "min_rating": null
+      },
+      "trigger_condition": null
+    },
+    {
+      "mission_id": "COMPOSITION_FRAMED_NATURALLY",
+      "category": "composition",
+      "skill_path": "composer",
+      "hidden_name": "Framed Naturally",
+      "player_hint": "Use a natural frame (doorway, branches, arch)",
+      "difficulty": "uncommon",
+      "xp": 20,
+      "pool": "core",
+      "active": true,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "framed_naturally"
+        ],
+        "match_mode": "any",
+        "min_rating": null
+      },
+      "trigger_condition": null
+    },
+    {
+      "mission_id": "COMPOSITION_BALANCE_ACT",
+      "category": "composition",
+      "skill_path": "composer",
+      "hidden_name": "Balance Act",
+      "player_hint": "Balance two subjects on either side of the frame",
+      "difficulty": "uncommon",
+      "xp": 20,
+      "pool": "core",
+      "active": true,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "balance_act"
+        ],
+        "match_mode": "any",
+        "min_rating": null
+      },
+      "trigger_condition": null
+    },
+    {
+      "mission_id": "COMPOSITION_CURVED_PATH",
+      "category": "composition",
+      "skill_path": "composer",
+      "hidden_name": "Curved Path",
+      "player_hint": "Find a curve that leads through the scene",
+      "difficulty": "uncommon",
+      "xp": 20,
+      "pool": "core",
+      "active": true,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "curved_path"
+        ],
+        "match_mode": "any",
+        "min_rating": null
+      },
+      "trigger_condition": null
+    },
+    {
+      "mission_id": "COMPOSITION_TINY_SUBJECT_BIG_SPACE",
+      "category": "composition",
+      "skill_path": "composer",
+      "hidden_name": "Tiny Subject, Big Space",
+      "player_hint": "A small subject in a huge open space",
+      "difficulty": "uncommon",
+      "xp": 20,
+      "pool": "core",
+      "active": true,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "tiny_subject_big_space"
+        ],
+        "match_mode": "any",
+        "min_rating": null
+      },
+      "trigger_condition": null
+    },
+    {
+      "mission_id": "COMPOSITION_THREE_LAYERS",
+      "category": "composition",
+      "skill_path": "composer",
+      "hidden_name": "Three Layers",
+      "player_hint": "Include foreground, middle ground and background",
+      "difficulty": "rare",
+      "xp": 40,
+      "pool": "core",
+      "active": false,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "three_layers"
+        ],
+        "match_mode": "any",
+        "min_rating": null
+      },
+      "trigger_condition": null
+    },
+    {
+      "mission_id": "COMPOSITION_RULE_BREAKER",
+      "category": "composition",
+      "skill_path": "composer",
+      "hidden_name": "Rule Breaker",
+      "player_hint": "Break the rule of thirds on purpose",
+      "difficulty": "rare",
+      "xp": 40,
+      "pool": "core",
+      "active": false,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "rule_breaker"
+        ],
+        "match_mode": "any",
+        "min_rating": null
+      },
+      "trigger_condition": null
+    },
+    {
+      "mission_id": "COMPOSITION_PATTERN_INTERRUPTED",
+      "category": "composition",
+      "skill_path": "composer",
+      "hidden_name": "Pattern Interrupted",
+      "player_hint": "Find a pattern, then something that breaks it",
+      "difficulty": "rare",
+      "xp": 40,
+      "pool": "core",
+      "active": false,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "pattern_interrupted"
+        ],
+        "match_mode": "any",
+        "min_rating": null
+      },
+      "trigger_condition": null
+    },
+    {
+      "mission_id": "COMPOSITION_HIGH_AND_LOW",
+      "category": "composition",
+      "skill_path": "composer",
+      "hidden_name": "High and Low",
+      "player_hint": "Same subject, two very different angles",
+      "difficulty": "rare",
+      "xp": 40,
+      "pool": "core",
+      "active": false,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "high_and_low"
+        ],
+        "match_mode": "any",
+        "min_rating": null
+      },
+      "trigger_condition": null
+    },
+    {
+      "mission_id": "COMPOSITION_ONE_LINE_STORY",
+      "category": "composition",
+      "skill_path": "composer",
+      "hidden_name": "One Line Story",
+      "player_hint": "Tell a story with a single straight line",
+      "difficulty": "rare",
+      "xp": 40,
+      "pool": "core",
+      "active": false,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "one_line_story"
+        ],
+        "match_mode": "any",
+        "min_rating": null
+      },
+      "trigger_condition": null
+    },
+    {
+      "mission_id": "COMPOSITION_HALF_AND_HALF",
+      "category": "composition",
+      "skill_path": "composer",
+      "hidden_name": "Half and Half",
+      "player_hint": "Split your frame exactly in two",
+      "difficulty": "rare",
+      "xp": 40,
+      "pool": "core",
+      "active": false,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "half_and_half"
+        ],
+        "match_mode": "any",
+        "min_rating": null
+      },
+      "trigger_condition": null
+    },
+    {
+      "mission_id": "COMPOSITION_ANCHOR_POINT",
+      "category": "composition",
+      "skill_path": "composer",
+      "hidden_name": "Anchor Point",
+      "player_hint": "Give your photo one strong point the eye lands on first",
+      "difficulty": "rare",
+      "xp": 40,
+      "pool": "core",
+      "active": false,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "anchor_point"
+        ],
+        "match_mode": "any",
+        "min_rating": null
+      },
+      "trigger_condition": null
+    },
+    {
+      "mission_id": "COMPOSITION_LAYERED_DEPTH",
+      "category": "composition",
+      "skill_path": "composer",
+      "hidden_name": "Layered Depth",
+      "player_hint": "A photo where near and far both matter",
+      "difficulty": "rare",
+      "xp": 40,
+      "pool": "core",
+      "active": false,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "layered_depth"
+        ],
+        "match_mode": "any",
+        "min_rating": null
+      },
+      "trigger_condition": null
+    },
+    {
+      "mission_id": "COMPOSITION_QUIET_CORNER",
+      "category": "composition",
+      "skill_path": "composer",
+      "hidden_name": "Quiet Corner",
+      "player_hint": "Compose a shot using empty space as the main subject",
+      "difficulty": "legendary",
+      "xp": 80,
+      "pool": "core",
+      "active": false,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "quiet_corner"
+        ],
+        "match_mode": "any",
+        "min_rating": 4
+      },
+      "trigger_condition": null
+    },
+    {
+      "mission_id": "COMPOSITION_FLAWLESS_SYMMETRY",
+      "category": "composition",
+      "skill_path": "composer",
+      "hidden_name": "Flawless Symmetry",
+      "player_hint": "Find symmetry so precise it looks almost unnatural",
+      "difficulty": "legendary",
+      "xp": 80,
+      "pool": "core",
+      "active": false,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "flawless_symmetry"
+        ],
+        "match_mode": "any",
+        "min_rating": 4
+      },
+      "trigger_condition": null
+    },
+    {
+      "mission_id": "COMPOSITION_INFINITE_CORRIDOR",
+      "category": "composition",
+      "skill_path": "composer",
+      "hidden_name": "Infinite Corridor",
+      "player_hint": "Find a vanishing point with three or more receding layers",
+      "difficulty": "legendary",
+      "xp": 80,
+      "pool": "core",
+      "active": false,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "infinite_corridor"
+        ],
+        "match_mode": "any",
+        "min_rating": 4
+      },
+      "trigger_condition": null
+    },
+    {
+      "mission_id": "COMPOSITION_THE_TRIO_EFFECT",
+      "category": "composition",
+      "skill_path": "composer",
+      "hidden_name": "The Trio Effect",
+      "player_hint": "Three objects, no two identical, forming a perfect visual rhythm",
+      "difficulty": "legendary",
+      "xp": 80,
+      "pool": "core",
+      "active": false,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "the_trio_effect"
+        ],
+        "match_mode": "any",
+        "min_rating": 4
+      },
+      "trigger_condition": null
+    },
+    {
+      "mission_id": "LIGHT_SHADOW_PLAY",
+      "category": "light",
+      "skill_path": "light_chaser",
+      "hidden_name": "Shadow Play",
+      "player_hint": "Interesting shadows",
+      "difficulty": "common",
+      "xp": 10,
+      "pool": "core",
+      "active": true,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "shadow_play"
+        ],
+        "match_mode": "any",
+        "min_rating": null
+      },
+      "trigger_condition": null
+    },
+    {
+      "mission_id": "LIGHT_GOLDEN_WARMTH",
+      "category": "light",
+      "skill_path": "light_chaser",
+      "hidden_name": "Golden Warmth",
+      "player_hint": "Warm sunlight on something",
+      "difficulty": "common",
+      "xp": 10,
+      "pool": "core",
+      "active": true,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "golden_warmth"
+        ],
+        "match_mode": "any",
+        "min_rating": null
+      },
+      "trigger_condition": null
+    },
+    {
+      "mission_id": "LIGHT_WINDOW_GLOW",
+      "category": "light",
+      "skill_path": "light_chaser",
+      "hidden_name": "Window Glow",
+      "player_hint": "Soft light coming through a window",
+      "difficulty": "common",
+      "xp": 10,
+      "pool": "core",
+      "active": true,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "window_glow"
+        ],
+        "match_mode": "any",
+        "min_rating": null
+      },
+      "trigger_condition": null
+    },
+    {
+      "mission_id": "LIGHT_COOL_BLUE",
+      "category": "light",
+      "skill_path": "light_chaser",
+      "hidden_name": "Cool Blue",
+      "player_hint": "Cool-toned light (shade, evening, overcast)",
+      "difficulty": "common",
+      "xp": 10,
+      "pool": "core",
+      "active": true,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "cool_blue"
+        ],
+        "match_mode": "any",
+        "min_rating": null
+      },
+      "trigger_condition": null
+    },
+    {
+      "mission_id": "LIGHT_MIRROR_LIGHT",
+      "category": "light",
+      "skill_path": "light_chaser",
+      "hidden_name": "Mirror Light",
+      "player_hint": "A reflection of light",
+      "difficulty": "common",
+      "xp": 10,
+      "pool": "core",
+      "active": true,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "mirror_light"
+        ],
+        "match_mode": "any",
+        "min_rating": null
+      },
+      "trigger_condition": null
+    },
+    {
+      "mission_id": "LIGHT_BACKLIT",
+      "category": "light",
+      "skill_path": "light_chaser",
+      "hidden_name": "Backlit",
+      "player_hint": "Shoot your subject with light behind it",
+      "difficulty": "uncommon",
+      "xp": 20,
+      "pool": "core",
+      "active": true,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "backlit"
+        ],
+        "match_mode": "any",
+        "min_rating": null
+      },
+      "trigger_condition": null
+    },
+    {
+      "mission_id": "LIGHT_HIGH_CONTRAST",
+      "category": "light",
+      "skill_path": "light_chaser",
+      "hidden_name": "High Contrast",
+      "player_hint": "Strong light and dark in one shot",
+      "difficulty": "uncommon",
+      "xp": 20,
+      "pool": "core",
+      "active": true,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "high_contrast"
+        ],
+        "match_mode": "any",
+        "min_rating": null
+      },
+      "trigger_condition": null
+    },
+    {
+      "mission_id": "LIGHT_LONG_SHADOW",
+      "category": "light",
+      "skill_path": "light_chaser",
+      "hidden_name": "Long Shadow",
+      "player_hint": "A shadow longer than its subject",
+      "difficulty": "uncommon",
+      "xp": 20,
+      "pool": "core",
+      "active": true,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "long_shadow"
+        ],
+        "match_mode": "any",
+        "min_rating": null
+      },
+      "trigger_condition": null
+    },
+    {
+      "mission_id": "LIGHT_DAPPLED_LIGHT",
+      "category": "light",
+      "skill_path": "light_chaser",
+      "hidden_name": "Dappled Light",
+      "player_hint": "Light filtering through leaves or gaps",
+      "difficulty": "uncommon",
+      "xp": 20,
+      "pool": "core",
+      "active": true,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "dappled_light"
+        ],
+        "match_mode": "any",
+        "min_rating": null
+      },
+      "trigger_condition": null
+    },
+    {
+      "mission_id": "LIGHT_GLOW_FROM_WITHIN",
+      "category": "light",
+      "skill_path": "light_chaser",
+      "hidden_name": "Glow From Within",
+      "player_hint": "Something lit from inside (lamp, screen, candle)",
+      "difficulty": "uncommon",
+      "xp": 20,
+      "pool": "core",
+      "active": true,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "glow_from_within"
+        ],
+        "match_mode": "any",
+        "min_rating": null
+      },
+      "trigger_condition": null
+    },
+    {
+      "mission_id": "LIGHT_FLAT_LIGHT",
+      "category": "light",
+      "skill_path": "light_chaser",
+      "hidden_name": "Flat Light",
+      "player_hint": "A subject with almost no shadow at all",
+      "difficulty": "uncommon",
+      "xp": 20,
+      "pool": "core",
+      "active": true,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "flat_light"
+        ],
+        "match_mode": "any",
+        "min_rating": null
+      },
+      "trigger_condition": null
+    },
+    {
+      "mission_id": "LIGHT_LIGHT_AND_TEXTURE",
+      "category": "light",
+      "skill_path": "light_chaser",
+      "hidden_name": "Light and Texture",
+      "player_hint": "Light that reveals a surface's texture",
+      "difficulty": "uncommon",
+      "xp": 20,
+      "pool": "core",
+      "active": true,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "light_and_texture"
+        ],
+        "match_mode": "any",
+        "min_rating": null
+      },
+      "trigger_condition": null
+    },
+    {
+      "mission_id": "LIGHT_LIGHT_THROUGH_FABRIC",
+      "category": "light",
+      "skill_path": "light_chaser",
+      "hidden_name": "Light Through Fabric",
+      "player_hint": "Light passing through curtains or cloth",
+      "difficulty": "uncommon",
+      "xp": 20,
+      "pool": "core",
+      "active": true,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "light_through_fabric"
+        ],
+        "match_mode": "any",
+        "min_rating": null
+      },
+      "trigger_condition": null
+    },
+    {
+      "mission_id": "LIGHT_SILHOUETTE",
+      "category": "light",
+      "skill_path": "light_chaser",
+      "hidden_name": "Silhouette",
+      "player_hint": "Turn your subject into a silhouette",
+      "difficulty": "rare",
+      "xp": 40,
+      "pool": "core",
+      "active": false,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "silhouette"
+        ],
+        "match_mode": "any",
+        "min_rating": null
+      },
+      "trigger_condition": null
+    },
+    {
+      "mission_id": "LIGHT_SPOTLIGHT_EFFECT",
+      "category": "light",
+      "skill_path": "light_chaser",
+      "hidden_name": "Spotlight Effect",
+      "player_hint": "A single beam of light on one subject",
+      "difficulty": "rare",
+      "xp": 40,
+      "pool": "core",
+      "active": false,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "spotlight_effect"
+        ],
+        "match_mode": "any",
+        "min_rating": null
+      },
+      "trigger_condition": null
+    },
+    {
+      "mission_id": "LIGHT_RIM_OF_LIGHT",
+      "category": "light",
+      "skill_path": "light_chaser",
+      "hidden_name": "Rim of Light",
+      "player_hint": "Light outlining the edge of your subject",
+      "difficulty": "rare",
+      "xp": 40,
+      "pool": "core",
+      "active": false,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "rim_of_light"
+        ],
+        "match_mode": "any",
+        "min_rating": null
+      },
+      "trigger_condition": null
+    },
+    {
+      "mission_id": "LIGHT_MORNING_LIGHT",
+      "category": "light",
+      "skill_path": "light_chaser",
+      "hidden_name": "Morning Light",
+      "player_hint": "Capture the first light of the day",
+      "difficulty": "rare",
+      "xp": 40,
+      "pool": "core",
+      "active": false,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "morning_light"
+        ],
+        "match_mode": "any",
+        "min_rating": null
+      },
+      "trigger_condition": null
+    },
+    {
+      "mission_id": "LIGHT_FADING_LIGHT",
+      "category": "light",
+      "skill_path": "light_chaser",
+      "hidden_name": "Fading Light",
+      "player_hint": "Capture light just before it disappears",
+      "difficulty": "rare",
+      "xp": 40,
+      "pool": "core",
+      "active": false,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "fading_light"
+        ],
+        "match_mode": "any",
+        "min_rating": null
+      },
+      "trigger_condition": null
+    },
+    {
+      "mission_id": "LIGHT_SPLIT_LIGHT",
+      "category": "light",
+      "skill_path": "light_chaser",
+      "hidden_name": "Split Light",
+      "player_hint": "Half your subject lit, half in shadow",
+      "difficulty": "rare",
+      "xp": 40,
+      "pool": "core",
+      "active": false,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "split_light"
+        ],
+        "match_mode": "any",
+        "min_rating": null
+      },
+      "trigger_condition": null
+    },
+    {
+      "mission_id": "LIGHT_GLIMMER_IN_THE_DARK",
+      "category": "light",
+      "skill_path": "light_chaser",
+      "hidden_name": "Glimmer in the Dark",
+      "player_hint": "A single light source in a dark scene",
+      "difficulty": "rare",
+      "xp": 40,
+      "pool": "core",
+      "active": false,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "glimmer_in_the_dark"
+        ],
+        "match_mode": "any",
+        "min_rating": null
+      },
+      "trigger_condition": null
+    },
+    {
+      "mission_id": "LIGHT_SHADOW_STORY",
+      "category": "light",
+      "skill_path": "light_chaser",
+      "hidden_name": "Shadow Story",
+      "player_hint": "A shadow that tells you what's out of frame",
+      "difficulty": "rare",
+      "xp": 40,
+      "pool": "core",
+      "active": false,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "shadow_story"
+        ],
+        "match_mode": "any",
+        "min_rating": null
+      },
+      "trigger_condition": null
+    },
+    {
+      "mission_id": "LIGHT_SUNBURST",
+      "category": "light",
+      "skill_path": "light_chaser",
+      "hidden_name": "Sunburst",
+      "player_hint": "The sun peeking through an object",
+      "difficulty": "legendary",
+      "xp": 80,
+      "pool": "core",
+      "active": false,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "sunburst"
+        ],
+        "match_mode": "any",
+        "min_rating": 4
+      },
+      "trigger_condition": null
+    },
+    {
+      "mission_id": "LIGHT_PAINTED_BY_LIGHT",
+      "category": "light",
+      "skill_path": "light_chaser",
+      "hidden_name": "Painted by Light",
+      "player_hint": "A scene where light is the real subject, not the object",
+      "difficulty": "legendary",
+      "xp": 80,
+      "pool": "core",
+      "active": false,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "painted_by_light"
+        ],
+        "match_mode": "any",
+        "min_rating": 4
+      },
+      "trigger_condition": null
+    },
+    {
+      "mission_id": "LIGHT_LIQUID_LIGHT",
+      "category": "light",
+      "skill_path": "light_chaser",
+      "hidden_name": "Liquid Light",
+      "player_hint": "Light bouncing and scattering across multiple reflective surfaces at once",
+      "difficulty": "legendary",
+      "xp": 80,
+      "pool": "core",
+      "active": false,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "liquid_light"
+        ],
+        "match_mode": "any",
+        "min_rating": 4
+      },
+      "trigger_condition": null
+    },
+    {
+      "mission_id": "LIGHT_CHROMATIC_GLOW",
+      "category": "light",
+      "skill_path": "light_chaser",
+      "hidden_name": "Chromatic Glow",
+      "player_hint": "Light so colourful it changes the mood of the whole scene",
+      "difficulty": "legendary",
+      "xp": 80,
+      "pool": "core",
+      "active": false,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "chromatic_glow"
+        ],
+        "match_mode": "any",
+        "min_rating": 4
+      },
+      "trigger_condition": null
+    },
+    {
+      "mission_id": "COLOUR_ONE_DOMINANT_COLOUR",
+      "category": "colour",
+      "skill_path": "visual_artist",
+      "hidden_name": "One Dominant Colour",
+      "player_hint": "A scene ruled by one colour",
+      "difficulty": "common",
+      "xp": 10,
+      "pool": "core",
+      "active": true,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "one_dominant_colour"
+        ],
+        "match_mode": "any",
+        "min_rating": null
+      },
+      "trigger_condition": null
+    },
+    {
+      "mission_id": "COLOUR_TRIO",
+      "category": "colour",
+      "skill_path": "visual_artist",
+      "hidden_name": "Trio",
+      "player_hint": "Three colours together in one shot",
+      "difficulty": "common",
+      "xp": 10,
+      "pool": "core",
+      "active": true,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "trio"
+        ],
+        "match_mode": "any",
+        "min_rating": null
+      },
+      "trigger_condition": null
+    },
+    {
+      "mission_id": "COLOUR_WARM_ONLY",
+      "category": "colour",
+      "skill_path": "visual_artist",
+      "hidden_name": "Warm Only",
+      "player_hint": "Only warm colours (red, orange, yellow)",
+      "difficulty": "common",
+      "xp": 10,
+      "pool": "core",
+      "active": true,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "warm_only"
+        ],
+        "match_mode": "any",
+        "min_rating": null
+      },
+      "trigger_condition": null
+    },
+    {
+      "mission_id": "COLOUR_COOL_ONLY",
+      "category": "colour",
+      "skill_path": "visual_artist",
+      "hidden_name": "Cool Only",
+      "player_hint": "Only cool colours (blue, green, purple)",
+      "difficulty": "common",
+      "xp": 10,
+      "pool": "core",
+      "active": true,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "cool_only"
+        ],
+        "match_mode": "any",
+        "min_rating": null
+      },
+      "trigger_condition": null
+    },
+    {
+      "mission_id": "COLOUR_NATURE_S_PALETTE",
+      "category": "colour",
+      "skill_path": "visual_artist",
+      "hidden_name": "Nature's Palette",
+      "player_hint": "Colours found only in nature",
+      "difficulty": "common",
+      "xp": 10,
+      "pool": "core",
+      "active": true,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "nature_s_palette"
+        ],
+        "match_mode": "any",
+        "min_rating": null
+      },
+      "trigger_condition": null
+    },
+    {
+      "mission_id": "COLOUR_CLASH",
+      "category": "colour",
+      "skill_path": "visual_artist",
+      "hidden_name": "Clash",
+      "player_hint": "Two colours that clash",
+      "difficulty": "uncommon",
+      "xp": 20,
+      "pool": "core",
+      "active": true,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "clash"
+        ],
+        "match_mode": "any",
+        "min_rating": null
+      },
+      "trigger_condition": null
+    },
+    {
+      "mission_id": "COLOUR_ALMOST_MONOCHROME",
+      "category": "colour",
+      "skill_path": "visual_artist",
+      "hidden_name": "Almost Monochrome",
+      "player_hint": "A scene that's almost black and white",
+      "difficulty": "uncommon",
+      "xp": 20,
+      "pool": "core",
+      "active": true,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "almost_monochrome"
+        ],
+        "match_mode": "any",
+        "min_rating": null
+      },
+      "trigger_condition": null
+    },
+    {
+      "mission_id": "COLOUR_POP_OF_COLOUR",
+      "category": "colour",
+      "skill_path": "visual_artist",
+      "hidden_name": "Pop of Colour",
+      "player_hint": "One colour standing out from a dull background",
+      "difficulty": "uncommon",
+      "xp": 20,
+      "pool": "core",
+      "active": true,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "pop_of_colour"
+        ],
+        "match_mode": "any",
+        "min_rating": null
+      },
+      "trigger_condition": null
+    },
+    {
+      "mission_id": "COLOUR_MUTED_TONES",
+      "category": "colour",
+      "skill_path": "visual_artist",
+      "hidden_name": "Muted Tones",
+      "player_hint": "Soft, faded, dusty colours",
+      "difficulty": "uncommon",
+      "xp": 20,
+      "pool": "core",
+      "active": true,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "muted_tones"
+        ],
+        "match_mode": "any",
+        "min_rating": null
+      },
+      "trigger_condition": null
+    },
+    {
+      "mission_id": "COLOUR_SKIN_OF_THE_CITY",
+      "category": "colour",
+      "skill_path": "visual_artist",
+      "hidden_name": "Skin of the City",
+      "player_hint": "The dominant colour of a building or wall",
+      "difficulty": "uncommon",
+      "xp": 20,
+      "pool": "core",
+      "active": true,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "skin_of_the_city"
+        ],
+        "match_mode": "any",
+        "min_rating": null
+      },
+      "trigger_condition": null
+    },
+    {
+      "mission_id": "COLOUR_FADED_PAINT",
+      "category": "colour",
+      "skill_path": "visual_artist",
+      "hidden_name": "Faded Paint",
+      "player_hint": "Colour that's peeling or worn",
+      "difficulty": "uncommon",
+      "xp": 20,
+      "pool": "core",
+      "active": true,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "faded_paint"
+        ],
+        "match_mode": "any",
+        "min_rating": null
+      },
+      "trigger_condition": null
+    },
+    {
+      "mission_id": "COLOUR_COLOUR_ECHO",
+      "category": "colour",
+      "skill_path": "visual_artist",
+      "hidden_name": "Colour Echo",
+      "player_hint": "A colour that repeats twice in the same frame",
+      "difficulty": "uncommon",
+      "xp": 20,
+      "pool": "core",
+      "active": true,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "colour_echo"
+        ],
+        "match_mode": "any",
+        "min_rating": null
+      },
+      "trigger_condition": null
+    },
+    {
+      "mission_id": "COLOUR_SKIN_TONES",
+      "category": "colour",
+      "skill_path": "visual_artist",
+      "hidden_name": "Skin Tones",
+      "player_hint": "A portrait where skin tone is the warmest thing in frame",
+      "difficulty": "uncommon",
+      "xp": 20,
+      "pool": "core",
+      "active": true,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "skin_tones"
+        ],
+        "match_mode": "any",
+        "min_rating": null
+      },
+      "trigger_condition": null
+    },
+    {
+      "mission_id": "COLOUR_COMPLEMENTARY_PAIR",
+      "category": "colour",
+      "skill_path": "visual_artist",
+      "hidden_name": "Complementary Pair",
+      "player_hint": "Two colours opposite each other (e.g. red/green)",
+      "difficulty": "rare",
+      "xp": 40,
+      "pool": "core",
+      "active": false,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "complementary_pair"
+        ],
+        "match_mode": "any",
+        "min_rating": null
+      },
+      "trigger_condition": null
+    },
+    {
+      "mission_id": "COLOUR_COLOUR_OF_THE_SEASON",
+      "category": "colour",
+      "skill_path": "visual_artist",
+      "hidden_name": "Colour of the Season",
+      "player_hint": "A colour that reminds you of the current season",
+      "difficulty": "rare",
+      "xp": 40,
+      "pool": "core",
+      "active": false,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "colour_of_the_season"
+        ],
+        "match_mode": "any",
+        "min_rating": null
+      },
+      "trigger_condition": null
+    },
+    {
+      "mission_id": "COLOUR_COLOUR_IN_MOTION",
+      "category": "colour",
+      "skill_path": "visual_artist",
+      "hidden_name": "Colour in Motion",
+      "player_hint": "A colour on something moving",
+      "difficulty": "rare",
+      "xp": 40,
+      "pool": "core",
+      "active": false,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "colour_in_motion"
+        ],
+        "match_mode": "any",
+        "min_rating": null
+      },
+      "trigger_condition": null
+    },
+    {
+      "mission_id": "COLOUR_NEON_HOUR",
+      "category": "colour",
+      "skill_path": "visual_artist",
+      "hidden_name": "Neon Hour",
+      "player_hint": "Artificial or neon colour at night",
+      "difficulty": "rare",
+      "xp": 40,
+      "pool": "core",
+      "active": false,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "neon_hour"
+        ],
+        "match_mode": "any",
+        "min_rating": null
+      },
+      "trigger_condition": null
+    },
+    {
+      "mission_id": "COLOUR_SINGLE_SPLASH",
+      "category": "colour",
+      "skill_path": "visual_artist",
+      "hidden_name": "Single Splash",
+      "player_hint": "A tiny splash of colour in an otherwise grey scene",
+      "difficulty": "rare",
+      "xp": 40,
+      "pool": "core",
+      "active": false,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "single_splash"
+        ],
+        "match_mode": "any",
+        "min_rating": null
+      },
+      "trigger_condition": null
+    },
+    {
+      "mission_id": "COLOUR_SUNSET_PALETTE",
+      "category": "colour",
+      "skill_path": "visual_artist",
+      "hidden_name": "Sunset Palette",
+      "player_hint": "Capture the colours of a sunset or sunrise",
+      "difficulty": "rare",
+      "xp": 40,
+      "pool": "core",
+      "active": false,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "sunset_palette"
+        ],
+        "match_mode": "any",
+        "min_rating": null
+      },
+      "trigger_condition": null
+    },
+    {
+      "mission_id": "COLOUR_COLOUR_TEMPERATURE_MIX",
+      "category": "colour",
+      "skill_path": "visual_artist",
+      "hidden_name": "Colour Temperature Mix",
+      "player_hint": "Warm and cool colours in the same shot",
+      "difficulty": "rare",
+      "xp": 40,
+      "pool": "core",
+      "active": false,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "colour_temperature_mix"
+        ],
+        "match_mode": "any",
+        "min_rating": null
+      },
+      "trigger_condition": null
+    },
+    {
+      "mission_id": "COLOUR_COLOURLESS",
+      "category": "colour",
+      "skill_path": "visual_artist",
+      "hidden_name": "Colourless",
+      "player_hint": "A scene with almost no colour at all",
+      "difficulty": "rare",
+      "xp": 40,
+      "pool": "core",
+      "active": false,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "colourless"
+        ],
+        "match_mode": "any",
+        "min_rating": null
+      },
+      "trigger_condition": null
+    },
+    {
+      "mission_id": "COLOUR_SIGNATURE_COLOUR",
+      "category": "colour",
+      "skill_path": "visual_artist",
+      "hidden_name": "Signature Colour",
+      "player_hint": "A colour that feels like \"you\"",
+      "difficulty": "legendary",
+      "xp": 80,
+      "pool": "core",
+      "active": false,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "signature_colour"
+        ],
+        "match_mode": "any",
+        "min_rating": 4
+      },
+      "trigger_condition": null
+    },
+    {
+      "mission_id": "COLOUR_COLOUR_EXPLOSION",
+      "category": "colour",
+      "skill_path": "visual_artist",
+      "hidden_name": "Colour Explosion",
+      "player_hint": "A scene so saturated it feels almost artificial, found in nature",
+      "difficulty": "legendary",
+      "xp": 80,
+      "pool": "core",
+      "active": false,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "colour_explosion"
+        ],
+        "match_mode": "any",
+        "min_rating": 4
+      },
+      "trigger_condition": null
+    },
+    {
+      "mission_id": "COLOUR_FULL_SPECTRUM",
+      "category": "colour",
+      "skill_path": "visual_artist",
+      "hidden_name": "Full Spectrum",
+      "player_hint": "Find all six primary/secondary colours in one single frame",
+      "difficulty": "legendary",
+      "xp": 80,
+      "pool": "core",
+      "active": false,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "full_spectrum"
+        ],
+        "match_mode": "any",
+        "min_rating": 4
+      },
+      "trigger_condition": null
+    },
+    {
+      "mission_id": "COLOUR_COLOUR_TWINS",
+      "category": "colour",
+      "skill_path": "visual_artist",
+      "hidden_name": "Colour Twins",
+      "player_hint": "Two completely different objects that share the exact same shade",
+      "difficulty": "legendary",
+      "xp": 80,
+      "pool": "core",
+      "active": false,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "colour_twins"
+        ],
+        "match_mode": "any",
+        "min_rating": 4
+      },
+      "trigger_condition": null
+    },
+    {
+      "mission_id": "STORYTELLING_A_PEACEFUL_MOMENT",
+      "category": "storytelling",
+      "skill_path": "storyteller",
+      "hidden_name": "A Peaceful Moment",
+      "player_hint": "Capture calm",
+      "difficulty": "common",
+      "xp": 10,
+      "pool": "core",
+      "active": true,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "a_peaceful_moment"
+        ],
+        "match_mode": "any",
+        "min_rating": null
+      },
+      "trigger_condition": null
+    },
+    {
+      "mission_id": "STORYTELLING_COMFORT_OBJECT",
+      "category": "storytelling",
+      "skill_path": "storyteller",
+      "hidden_name": "Comfort Object",
+      "player_hint": "Something that brings comfort",
+      "difficulty": "common",
+      "xp": 10,
+      "pool": "core",
+      "active": true,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "comfort_object"
+        ],
+        "match_mode": "any",
+        "min_rating": null
+      },
+      "trigger_condition": null
+    },
+    {
+      "mission_id": "STORYTELLING_FEELS_HOPEFUL",
+      "category": "storytelling",
+      "skill_path": "storyteller",
+      "hidden_name": "Feels Hopeful",
+      "player_hint": "A scene that feels hopeful",
+      "difficulty": "common",
+      "xp": 10,
+      "pool": "core",
+      "active": true,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "feels_hopeful"
+        ],
+        "match_mode": "any",
+        "min_rating": null
+      },
+      "trigger_condition": null
+    },
+    {
+      "mission_id": "STORYTELLING_NEW_BEGINNING",
+      "category": "storytelling",
+      "skill_path": "storyteller",
+      "hidden_name": "New Beginning",
+      "player_hint": "A scene that feels like a start",
+      "difficulty": "common",
+      "xp": 10,
+      "pool": "core",
+      "active": true,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "new_beginning"
+        ],
+        "match_mode": "any",
+        "min_rating": null
+      },
+      "trigger_condition": null
+    },
+    {
+      "mission_id": "STORYTELLING_SOMETHING_WAITING",
+      "category": "storytelling",
+      "skill_path": "storyteller",
+      "hidden_name": "Something Waiting",
+      "player_hint": "An object or place that feels like it's waiting for someone",
+      "difficulty": "common",
+      "xp": 10,
+      "pool": "core",
+      "active": true,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "something_waiting"
+        ],
+        "match_mode": "any",
+        "min_rating": null
+      },
+      "trigger_condition": null
+    },
+    {
+      "mission_id": "STORYTELLING_EVIDENCE_SOMEONE_WAS_HERE",
+      "category": "storytelling",
+      "skill_path": "storyteller",
+      "hidden_name": "Evidence Someone Was Here",
+      "player_hint": "Signs that someone was recently in this spot",
+      "difficulty": "uncommon",
+      "xp": 20,
+      "pool": "core",
+      "active": true,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "evidence_someone_was_here"
+        ],
+        "match_mode": "any",
+        "min_rating": null
+      },
+      "trigger_condition": null
+    },
+    {
+      "mission_id": "STORYTELLING_UNFINISHED_BUSINESS",
+      "category": "storytelling",
+      "skill_path": "storyteller",
+      "hidden_name": "Unfinished Business",
+      "player_hint": "Something left incomplete",
+      "difficulty": "uncommon",
+      "xp": 20,
+      "pool": "core",
+      "active": true,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "unfinished_business"
+        ],
+        "match_mode": "any",
+        "min_rating": null
+      },
+      "trigger_condition": null
+    },
+    {
+      "mission_id": "STORYTELLING_SOMEONE_S_ROUTINE",
+      "category": "storytelling",
+      "skill_path": "storyteller",
+      "hidden_name": "Someone's Routine",
+      "player_hint": "Evidence of a daily habit or routine",
+      "difficulty": "uncommon",
+      "xp": 20,
+      "pool": "core",
+      "active": true,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "someone_s_routine"
+        ],
+        "match_mode": "any",
+        "min_rating": null
+      },
+      "trigger_condition": null
+    },
+    {
+      "mission_id": "STORYTELLING_PASSING_TIME",
+      "category": "storytelling",
+      "skill_path": "storyteller",
+      "hidden_name": "Passing Time",
+      "player_hint": "Something that shows the passage of time",
+      "difficulty": "uncommon",
+      "xp": 20,
+      "pool": "core",
+      "active": true,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "passing_time"
+        ],
+        "match_mode": "any",
+        "min_rating": null
+      },
+      "trigger_condition": null
+    },
+    {
+      "mission_id": "STORYTELLING_EVERYDAY_RITUAL",
+      "category": "storytelling",
+      "skill_path": "storyteller",
+      "hidden_name": "Everyday Ritual",
+      "player_hint": "A small, repeated daily action caught in a photo",
+      "difficulty": "uncommon",
+      "xp": 20,
+      "pool": "core",
+      "active": true,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "everyday_ritual"
+        ],
+        "match_mode": "any",
+        "min_rating": null
+      },
+      "trigger_condition": null
+    },
+    {
+      "mission_id": "STORYTELLING_THE_JOURNEY",
+      "category": "storytelling",
+      "skill_path": "storyteller",
+      "hidden_name": "The Journey",
+      "player_hint": "A path, road, or route that suggests a journey",
+      "difficulty": "uncommon",
+      "xp": 20,
+      "pool": "core",
+      "active": true,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "the_journey"
+        ],
+        "match_mode": "any",
+        "min_rating": null
+      },
+      "trigger_condition": null
+    },
+    {
+      "mission_id": "STORYTELLING_LEFT_A_MARK",
+      "category": "storytelling",
+      "skill_path": "storyteller",
+      "hidden_name": "Left a Mark",
+      "player_hint": "Something that has visibly changed its surroundings",
+      "difficulty": "uncommon",
+      "xp": 20,
+      "pool": "core",
+      "active": true,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "left_a_mark"
+        ],
+        "match_mode": "any",
+        "min_rating": null
+      },
+      "trigger_condition": null
+    },
+    {
+      "mission_id": "STORYTELLING_THE_WAIT",
+      "category": "storytelling",
+      "skill_path": "storyteller",
+      "hidden_name": "The Wait",
+      "player_hint": "Something in the middle of waiting for something else",
+      "difficulty": "uncommon",
+      "xp": 20,
+      "pool": "core",
+      "active": true,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "the_wait"
+        ],
+        "match_mode": "any",
+        "min_rating": null
+      },
+      "trigger_condition": null
+    },
+    {
+      "mission_id": "STORYTELLING_A_HIDDEN_MEMORY",
+      "category": "storytelling",
+      "skill_path": "storyteller",
+      "hidden_name": "A Hidden Memory",
+      "player_hint": "Something that reminds you of the past",
+      "difficulty": "rare",
+      "xp": 40,
+      "pool": "core",
+      "active": false,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "a_hidden_memory"
+        ],
+        "match_mode": "any",
+        "min_rating": null
+      },
+      "trigger_condition": null
+    },
+    {
+      "mission_id": "STORYTELLING_FEELS_LONELY",
+      "category": "storytelling",
+      "skill_path": "storyteller",
+      "hidden_name": "Feels Lonely",
+      "player_hint": "A scene that feels lonely",
+      "difficulty": "rare",
+      "xp": 40,
+      "pool": "core",
+      "active": false,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "feels_lonely"
+        ],
+        "match_mode": "any",
+        "min_rating": null
+      },
+      "trigger_condition": null
+    },
+    {
+      "mission_id": "STORYTELLING_BEFORE_AND_AFTER",
+      "category": "storytelling",
+      "skill_path": "storyteller",
+      "hidden_name": "Before and After",
+      "player_hint": "Something clearly in transition or mid-change",
+      "difficulty": "rare",
+      "xp": 40,
+      "pool": "core",
+      "active": false,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "before_and_after"
+        ],
+        "match_mode": "any",
+        "min_rating": null
+      },
+      "trigger_condition": null
+    },
+    {
+      "mission_id": "STORYTELLING_QUIET_CONVERSATION",
+      "category": "storytelling",
+      "skill_path": "storyteller",
+      "hidden_name": "Quiet Conversation",
+      "player_hint": "Two objects that seem to be \"talking\" to each other",
+      "difficulty": "rare",
+      "xp": 40,
+      "pool": "core",
+      "active": false,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "quiet_conversation"
+        ],
+        "match_mode": "any",
+        "min_rating": null
+      },
+      "trigger_condition": null
+    },
+    {
+      "mission_id": "STORYTELLING_SOMEONE_S_ABSENCE",
+      "category": "storytelling",
+      "skill_path": "storyteller",
+      "hidden_name": "Someone's Absence",
+      "player_hint": "A space that feels empty because someone left",
+      "difficulty": "rare",
+      "xp": 40,
+      "pool": "core",
+      "active": false,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "someone_s_absence"
+        ],
+        "match_mode": "any",
+        "min_rating": null
+      },
+      "trigger_condition": null
+    },
+    {
+      "mission_id": "STORYTELLING_SECRET_LIFE",
+      "category": "storytelling",
+      "skill_path": "storyteller",
+      "hidden_name": "Secret Life",
+      "player_hint": "Something ordinary that might have a secret story",
+      "difficulty": "rare",
+      "xp": 40,
+      "pool": "core",
+      "active": false,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "secret_life"
+        ],
+        "match_mode": "any",
+        "min_rating": null
+      },
+      "trigger_condition": null
+    },
+    {
+      "mission_id": "STORYTELLING_A_SMALL_KINDNESS",
+      "category": "storytelling",
+      "skill_path": "storyteller",
+      "hidden_name": "A Small Kindness",
+      "player_hint": "Evidence of care or kindness",
+      "difficulty": "rare",
+      "xp": 40,
+      "pool": "core",
+      "active": false,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "a_small_kindness"
+        ],
+        "match_mode": "any",
+        "min_rating": null
+      },
+      "trigger_condition": null
+    },
+    {
+      "mission_id": "STORYTELLING_HOME_AWAY_FROM_HOME",
+      "category": "storytelling",
+      "skill_path": "storyteller",
+      "hidden_name": "Home Away From Home",
+      "player_hint": "A place that feels like home, even if it isn't yours",
+      "difficulty": "rare",
+      "xp": 40,
+      "pool": "core",
+      "active": false,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "home_away_from_home"
+        ],
+        "match_mode": "any",
+        "min_rating": null
+      },
+      "trigger_condition": null
+    },
+    {
+      "mission_id": "STORYTELLING_ONE_DETAIL_SAYS_IT_ALL",
+      "category": "storytelling",
+      "skill_path": "storyteller",
+      "hidden_name": "One Detail Says It All",
+      "player_hint": "A single small detail that tells a whole story",
+      "difficulty": "legendary",
+      "xp": 80,
+      "pool": "core",
+      "active": false,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "one_detail_says_it_all"
+        ],
+        "match_mode": "any",
+        "min_rating": 4
+      },
+      "trigger_condition": null
+    },
+    {
+      "mission_id": "STORYTELLING_YOUR_STORY_TODAY",
+      "category": "storytelling",
+      "skill_path": "storyteller",
+      "hidden_name": "Your Story Today",
+      "player_hint": "One photo that sums up your entire day",
+      "difficulty": "legendary",
+      "xp": 80,
+      "pool": "core",
+      "active": false,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "your_story_today"
+        ],
+        "match_mode": "any",
+        "min_rating": 4
+      },
+      "trigger_condition": null
+    },
+    {
+      "mission_id": "STORYTELLING_THE_FINAL_FRAME",
+      "category": "storytelling",
+      "skill_path": "storyteller",
+      "hidden_name": "The Final Frame",
+      "player_hint": "A scene so conclusively \"the end\" that no caption is needed",
+      "difficulty": "legendary",
+      "xp": 80,
+      "pool": "core",
+      "active": false,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "the_final_frame"
+        ],
+        "match_mode": "any",
+        "min_rating": 4
+      },
+      "trigger_condition": null
+    },
+    {
+      "mission_id": "STORYTELLING_A_LIFE_OF_ITS_OWN",
+      "category": "storytelling",
+      "skill_path": "storyteller",
+      "hidden_name": "A Life of Its Own",
+      "player_hint": "An object with so much personality it feels like a character",
+      "difficulty": "legendary",
+      "xp": 80,
+      "pool": "core",
+      "active": false,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "a_life_of_its_own"
+        ],
+        "match_mode": "any",
+        "min_rating": 4
+      },
+      "trigger_condition": null
+    },
+    {
+      "mission_id": "MOVEMENT_WINDBLOWN",
+      "category": "movement",
+      "skill_path": "visual_artist",
+      "hidden_name": "Windblown",
+      "player_hint": "Something moved by the wind",
+      "difficulty": "common",
+      "xp": 10,
+      "pool": "core",
+      "active": true,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "windblown"
+        ],
+        "match_mode": "any",
+        "min_rating": null
+      },
+      "trigger_condition": null
+    },
+    {
+      "mission_id": "MOVEMENT_ROLLING_WHEELS",
+      "category": "movement",
+      "skill_path": "visual_artist",
+      "hidden_name": "Rolling Wheels",
+      "player_hint": "Something with wheels in motion",
+      "difficulty": "common",
+      "xp": 10,
+      "pool": "core",
+      "active": true,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "rolling_wheels"
+        ],
+        "match_mode": "any",
+        "min_rating": null
+      },
+      "trigger_condition": null
+    },
+    {
+      "mission_id": "MOVEMENT_SWAYING",
+      "category": "movement",
+      "skill_path": "visual_artist",
+      "hidden_name": "Swaying",
+      "player_hint": "Something swaying gently",
+      "difficulty": "common",
+      "xp": 10,
+      "pool": "core",
+      "active": true,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "swaying"
+        ],
+        "match_mode": "any",
+        "min_rating": null
+      },
+      "trigger_condition": null
+    },
+    {
+      "mission_id": "MOVEMENT_DRIFT",
+      "category": "movement",
+      "skill_path": "visual_artist",
+      "hidden_name": "Drift",
+      "player_hint": "Something drifting slowly (leaf, cloud, boat)",
+      "difficulty": "common",
+      "xp": 10,
+      "pool": "core",
+      "active": true,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "drift"
+        ],
+        "match_mode": "any",
+        "min_rating": null
+      },
+      "trigger_condition": null
+    },
+    {
+      "mission_id": "MOVEMENT_FULL_SPEED",
+      "category": "movement",
+      "skill_path": "visual_artist",
+      "hidden_name": "Full Speed",
+      "player_hint": "The fastest thing you can find nearby",
+      "difficulty": "common",
+      "xp": 10,
+      "pool": "core",
+      "active": true,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "full_speed"
+        ],
+        "match_mode": "any",
+        "min_rating": null
+      },
+      "trigger_condition": null
+    },
+    {
+      "mission_id": "MOVEMENT_FREEZE_FRAME",
+      "category": "movement",
+      "skill_path": "visual_artist",
+      "hidden_name": "Freeze Frame",
+      "player_hint": "Freeze something in motion",
+      "difficulty": "uncommon",
+      "xp": 20,
+      "pool": "core",
+      "active": true,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "freeze_frame"
+        ],
+        "match_mode": "any",
+        "min_rating": null
+      },
+      "trigger_condition": null
+    },
+    {
+      "mission_id": "MOVEMENT_WATER_IN_MOTION",
+      "category": "movement",
+      "skill_path": "visual_artist",
+      "hidden_name": "Water in Motion",
+      "player_hint": "Moving water",
+      "difficulty": "uncommon",
+      "xp": 20,
+      "pool": "core",
+      "active": true,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "water_in_motion"
+        ],
+        "match_mode": "any",
+        "min_rating": null
+      },
+      "trigger_condition": null
+    },
+    {
+      "mission_id": "MOVEMENT_TRAIL_OF_MOTION",
+      "category": "movement",
+      "skill_path": "visual_artist",
+      "hidden_name": "Trail of Motion",
+      "player_hint": "A trail left behind by movement",
+      "difficulty": "uncommon",
+      "xp": 20,
+      "pool": "core",
+      "active": true,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "trail_of_motion"
+        ],
+        "match_mode": "any",
+        "min_rating": null
+      },
+      "trigger_condition": null
+    },
+    {
+      "mission_id": "MOVEMENT_SPINNING",
+      "category": "movement",
+      "skill_path": "visual_artist",
+      "hidden_name": "Spinning",
+      "player_hint": "Something spinning",
+      "difficulty": "uncommon",
+      "xp": 20,
+      "pool": "core",
+      "active": true,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "spinning"
+        ],
+        "match_mode": "any",
+        "min_rating": null
+      },
+      "trigger_condition": null
+    },
+    {
+      "mission_id": "MOVEMENT_RIPPLE_EFFECT",
+      "category": "movement",
+      "skill_path": "visual_artist",
+      "hidden_name": "Ripple Effect",
+      "player_hint": "A ripple spreading outward",
+      "difficulty": "uncommon",
+      "xp": 20,
+      "pool": "core",
+      "active": true,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "ripple_effect"
+        ],
+        "match_mode": "any",
+        "min_rating": null
+      },
+      "trigger_condition": null
+    },
+    {
+      "mission_id": "MOVEMENT_GUST",
+      "category": "movement",
+      "skill_path": "visual_artist",
+      "hidden_name": "Gust",
+      "player_hint": "Evidence of a sudden gust of wind",
+      "difficulty": "uncommon",
+      "xp": 20,
+      "pool": "core",
+      "active": true,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "gust"
+        ],
+        "match_mode": "any",
+        "min_rating": null
+      },
+      "trigger_condition": null
+    },
+    {
+      "mission_id": "MOVEMENT_FLOW",
+      "category": "movement",
+      "skill_path": "visual_artist",
+      "hidden_name": "Flow",
+      "player_hint": "Something flowing steadily (traffic, crowd, stream)",
+      "difficulty": "uncommon",
+      "xp": 20,
+      "pool": "core",
+      "active": true,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "flow"
+        ],
+        "match_mode": "any",
+        "min_rating": null
+      },
+      "trigger_condition": null
+    },
+    {
+      "mission_id": "MOVEMENT_EVERYDAY_BLUR",
+      "category": "movement",
+      "skill_path": "visual_artist",
+      "hidden_name": "Everyday Blur",
+      "player_hint": "Motion blur from something ordinary (fan, pet, traffic)",
+      "difficulty": "uncommon",
+      "xp": 20,
+      "pool": "core",
+      "active": true,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "everyday_blur"
+        ],
+        "match_mode": "any",
+        "min_rating": null
+      },
+      "trigger_condition": null
+    },
+    {
+      "mission_id": "MOVEMENT_TAKE_FLIGHT",
+      "category": "movement",
+      "skill_path": "visual_artist",
+      "hidden_name": "Take Flight",
+      "player_hint": "Something flying or mid-air",
+      "difficulty": "rare",
+      "xp": 40,
+      "pool": "core",
+      "active": false,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "take_flight"
+        ],
+        "match_mode": "any",
+        "min_rating": null
+      },
+      "trigger_condition": null
+    },
+    {
+      "mission_id": "MOVEMENT_MOTION_BLUR",
+      "category": "movement",
+      "skill_path": "visual_artist",
+      "hidden_name": "Motion Blur",
+      "player_hint": "Deliberately blur something moving",
+      "difficulty": "rare",
+      "xp": 40,
+      "pool": "core",
+      "active": false,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "motion_blur"
+        ],
+        "match_mode": "any",
+        "min_rating": null
+      },
+      "trigger_condition": null
+    },
+    {
+      "mission_id": "MOVEMENT_FROZEN_SPLASH",
+      "category": "movement",
+      "skill_path": "visual_artist",
+      "hidden_name": "Frozen Splash",
+      "player_hint": "Freeze a splash or spray",
+      "difficulty": "rare",
+      "xp": 40,
+      "pool": "core",
+      "active": false,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "frozen_splash"
+        ],
+        "match_mode": "any",
+        "min_rating": null
+      },
+      "trigger_condition": null
+    },
+    {
+      "mission_id": "MOVEMENT_MID_STEP",
+      "category": "movement",
+      "skill_path": "visual_artist",
+      "hidden_name": "Mid-Step",
+      "player_hint": "Someone caught mid-step or mid-jump",
+      "difficulty": "rare",
+      "xp": 40,
+      "pool": "core",
+      "active": false,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "mid_step"
+        ],
+        "match_mode": "any",
+        "min_rating": null
+      },
+      "trigger_condition": null
+    },
+    {
+      "mission_id": "MOVEMENT_FAST_AND_STILL",
+      "category": "movement",
+      "skill_path": "visual_artist",
+      "hidden_name": "Fast and Still",
+      "player_hint": "A fast-moving object next to something completely still",
+      "difficulty": "rare",
+      "xp": 40,
+      "pool": "core",
+      "active": false,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "fast_and_still"
+        ],
+        "match_mode": "any",
+        "min_rating": null
+      },
+      "trigger_condition": null
+    },
+    {
+      "mission_id": "MOVEMENT_FALLING",
+      "category": "movement",
+      "skill_path": "visual_artist",
+      "hidden_name": "Falling",
+      "player_hint": "Something falling or about to fall",
+      "difficulty": "rare",
+      "xp": 40,
+      "pool": "core",
+      "active": false,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "falling"
+        ],
+        "match_mode": "any",
+        "min_rating": null
+      },
+      "trigger_condition": null
+    },
+    {
+      "mission_id": "MOVEMENT_MOMENTUM",
+      "category": "movement",
+      "skill_path": "visual_artist",
+      "hidden_name": "Momentum",
+      "player_hint": "A photo where you can feel the speed",
+      "difficulty": "rare",
+      "xp": 40,
+      "pool": "core",
+      "active": false,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "momentum"
+        ],
+        "match_mode": "any",
+        "min_rating": null
+      },
+      "trigger_condition": null
+    },
+    {
+      "mission_id": "MOVEMENT_PAUSE_BUTTON",
+      "category": "movement",
+      "skill_path": "visual_artist",
+      "hidden_name": "Pause Button",
+      "player_hint": "Motion frozen at its most dramatic point",
+      "difficulty": "rare",
+      "xp": 40,
+      "pool": "core",
+      "active": false,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "pause_button"
+        ],
+        "match_mode": "any",
+        "min_rating": null
+      },
+      "trigger_condition": null
+    },
+    {
+      "mission_id": "MOVEMENT_CHASING_LIGHT",
+      "category": "movement",
+      "skill_path": "visual_artist",
+      "hidden_name": "Chasing Light",
+      "player_hint": "A moving light trail (car lights, sparklers)",
+      "difficulty": "legendary",
+      "xp": 80,
+      "pool": "core",
+      "active": false,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "chasing_light"
+        ],
+        "match_mode": "any",
+        "min_rating": 4
+      },
+      "trigger_condition": null
+    },
+    {
+      "mission_id": "MOVEMENT_STILL_AMID_MOTION",
+      "category": "movement",
+      "skill_path": "visual_artist",
+      "hidden_name": "Still Amid Motion",
+      "player_hint": "One still subject surrounded by a moving crowd",
+      "difficulty": "legendary",
+      "xp": 80,
+      "pool": "core",
+      "active": false,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "still_amid_motion"
+        ],
+        "match_mode": "any",
+        "min_rating": 4
+      },
+      "trigger_condition": null
+    },
+    {
+      "mission_id": "MOVEMENT_WINGBEAT",
+      "category": "movement",
+      "skill_path": "visual_artist",
+      "hidden_name": "Wingbeat",
+      "player_hint": "A bird or insect mid-flight",
+      "difficulty": "legendary",
+      "xp": 80,
+      "pool": "core",
+      "active": false,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "wingbeat"
+        ],
+        "match_mode": "any",
+        "min_rating": 4
+      },
+      "trigger_condition": null
+    },
+    {
+      "mission_id": "MOVEMENT_PEAK_OF_THE_BOUNCE",
+      "category": "movement",
+      "skill_path": "visual_artist",
+      "hidden_name": "Peak of the Bounce",
+      "player_hint": "Capture an object at the exact top of its bounce",
+      "difficulty": "legendary",
+      "xp": 80,
+      "pool": "core",
+      "active": false,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "peak_of_the_bounce"
+        ],
+        "match_mode": "any",
+        "min_rating": 4
+      },
+      "trigger_condition": null
+    },
+    {
+      "mission_id": "PERSPECTIVE_GROUND_LEVEL",
+      "category": "perspective",
+      "skill_path": "observer",
+      "hidden_name": "Ground Level",
+      "player_hint": "Shoot from ground level",
+      "difficulty": "common",
+      "xp": 10,
+      "pool": "core",
+      "active": true,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "ground_level"
+        ],
+        "match_mode": "any",
+        "min_rating": null
+      },
+      "trigger_condition": null
+    },
+    {
+      "mission_id": "PERSPECTIVE_STRAIGHT_DOWN",
+      "category": "perspective",
+      "skill_path": "observer",
+      "hidden_name": "Straight Down",
+      "player_hint": "Look straight down and shoot",
+      "difficulty": "common",
+      "xp": 10,
+      "pool": "core",
+      "active": true,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "straight_down"
+        ],
+        "match_mode": "any",
+        "min_rating": null
+      },
+      "trigger_condition": null
+    },
+    {
+      "mission_id": "PERSPECTIVE_STRAIGHT_UP",
+      "category": "perspective",
+      "skill_path": "observer",
+      "hidden_name": "Straight Up",
+      "player_hint": "Look almost straight up",
+      "difficulty": "common",
+      "xp": 10,
+      "pool": "core",
+      "active": true,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "straight_up"
+        ],
+        "match_mode": "any",
+        "min_rating": null
+      },
+      "trigger_condition": null
+    },
+    {
+      "mission_id": "PERSPECTIVE_WORM_S_EYE",
+      "category": "perspective",
+      "skill_path": "observer",
+      "hidden_name": "Worm's Eye",
+      "player_hint": "Shoot upward from as low as possible",
+      "difficulty": "common",
+      "xp": 10,
+      "pool": "core",
+      "active": true,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "worm_s_eye"
+        ],
+        "match_mode": "any",
+        "min_rating": null
+      },
+      "trigger_condition": null
+    },
+    {
+      "mission_id": "PERSPECTIVE_SQUEEZE_THROUGH",
+      "category": "perspective",
+      "skill_path": "observer",
+      "hidden_name": "Squeeze Through",
+      "player_hint": "Shoot from a tight or unusual gap",
+      "difficulty": "common",
+      "xp": 10,
+      "pool": "core",
+      "active": true,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "squeeze_through"
+        ],
+        "match_mode": "any",
+        "min_rating": null
+      },
+      "trigger_condition": null
+    },
+    {
+      "mission_id": "PERSPECTIVE_GIANT_SMALL_THING",
+      "category": "perspective",
+      "skill_path": "observer",
+      "hidden_name": "Giant Small Thing",
+      "player_hint": "Make something small look huge",
+      "difficulty": "uncommon",
+      "xp": 20,
+      "pool": "core",
+      "active": true,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "giant_small_thing"
+        ],
+        "match_mode": "any",
+        "min_rating": null
+      },
+      "trigger_condition": null
+    },
+    {
+      "mission_id": "PERSPECTIVE_PARTIAL_VIEW",
+      "category": "perspective",
+      "skill_path": "observer",
+      "hidden_name": "Partial View",
+      "player_hint": "Photograph only part of something",
+      "difficulty": "uncommon",
+      "xp": 20,
+      "pool": "core",
+      "active": true,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "partial_view"
+        ],
+        "match_mode": "any",
+        "min_rating": null
+      },
+      "trigger_condition": null
+    },
+    {
+      "mission_id": "PERSPECTIVE_PEEK_THROUGH",
+      "category": "perspective",
+      "skill_path": "observer",
+      "hidden_name": "Peek Through",
+      "player_hint": "Peek through a small gap",
+      "difficulty": "uncommon",
+      "xp": 20,
+      "pool": "core",
+      "active": true,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "peek_through"
+        ],
+        "match_mode": "any",
+        "min_rating": null
+      },
+      "trigger_condition": null
+    },
+    {
+      "mission_id": "PERSPECTIVE_BEHIND_THE_SCENES",
+      "category": "perspective",
+      "skill_path": "observer",
+      "hidden_name": "Behind the Scenes",
+      "player_hint": "Photograph the back or underside of something",
+      "difficulty": "uncommon",
+      "xp": 20,
+      "pool": "core",
+      "active": true,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "behind_the_scenes"
+        ],
+        "match_mode": "any",
+        "min_rating": null
+      },
+      "trigger_condition": null
+    },
+    {
+      "mission_id": "PERSPECTIVE_TILTED_WORLD",
+      "category": "perspective",
+      "skill_path": "observer",
+      "hidden_name": "Tilted World",
+      "player_hint": "Shoot at a deliberate tilt",
+      "difficulty": "uncommon",
+      "xp": 20,
+      "pool": "core",
+      "active": true,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "tilted_world"
+        ],
+        "match_mode": "any",
+        "min_rating": null
+      },
+      "trigger_condition": null
+    },
+    {
+      "mission_id": "PERSPECTIVE_CLOSE_ENOUGH_TO_TOUCH",
+      "category": "perspective",
+      "skill_path": "observer",
+      "hidden_name": "Close Enough to Touch",
+      "player_hint": "Get closer than feels normal",
+      "difficulty": "uncommon",
+      "xp": 20,
+      "pool": "core",
+      "active": true,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "close_enough_to_touch"
+        ],
+        "match_mode": "any",
+        "min_rating": null
+      },
+      "trigger_condition": null
+    },
+    {
+      "mission_id": "PERSPECTIVE_FAR_ENOUGH_TO_VANISH",
+      "category": "perspective",
+      "skill_path": "observer",
+      "hidden_name": "Far Enough to Vanish",
+      "player_hint": "Make your subject tiny in a huge scene",
+      "difficulty": "uncommon",
+      "xp": 20,
+      "pool": "core",
+      "active": true,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "far_enough_to_vanish"
+        ],
+        "match_mode": "any",
+        "min_rating": null
+      },
+      "trigger_condition": null
+    },
+    {
+      "mission_id": "PERSPECTIVE_THROUGH_GLASS",
+      "category": "perspective",
+      "skill_path": "observer",
+      "hidden_name": "Through Glass",
+      "player_hint": "Shoot through glass or a reflective surface",
+      "difficulty": "uncommon",
+      "xp": 20,
+      "pool": "core",
+      "active": true,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "through_glass"
+        ],
+        "match_mode": "any",
+        "min_rating": null
+      },
+      "trigger_condition": null
+    },
+    {
+      "mission_id": "PERSPECTIVE_BIRD_S_EYE",
+      "category": "perspective",
+      "skill_path": "observer",
+      "hidden_name": "Bird's Eye",
+      "player_hint": "Shoot downward from as high as possible",
+      "difficulty": "rare",
+      "xp": 40,
+      "pool": "core",
+      "active": false,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "bird_s_eye"
+        ],
+        "match_mode": "any",
+        "min_rating": null
+      },
+      "trigger_condition": null
+    },
+    {
+      "mission_id": "PERSPECTIVE_THROUGH_SOMEONE_ELSE_S_EYES",
+      "category": "perspective",
+      "skill_path": "observer",
+      "hidden_name": "Through Someone Else's Eyes",
+      "player_hint": "Shoot from a height that isn't your own",
+      "difficulty": "rare",
+      "xp": 40,
+      "pool": "core",
+      "active": false,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "through_someone_else_s_eyes"
+        ],
+        "match_mode": "any",
+        "min_rating": null
+      },
+      "trigger_condition": null
+    },
+    {
+      "mission_id": "PERSPECTIVE_REFLECTION_FLIP",
+      "category": "perspective",
+      "skill_path": "observer",
+      "hidden_name": "Reflection Flip",
+      "player_hint": "Shoot a reflection so it looks upside down",
+      "difficulty": "rare",
+      "xp": 40,
+      "pool": "core",
+      "active": false,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "reflection_flip"
+        ],
+        "match_mode": "any",
+        "min_rating": null
+      },
+      "trigger_condition": null
+    },
+    {
+      "mission_id": "PERSPECTIVE_THROUGH_A_FRAME_WITHIN_A_FRAME",
+      "category": "perspective",
+      "skill_path": "observer",
+      "hidden_name": "Through a Frame Within a Frame",
+      "player_hint": "Shoot a subject through another frame",
+      "difficulty": "rare",
+      "xp": 40,
+      "pool": "core",
+      "active": false,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "through_a_frame_within_a_frame"
+        ],
+        "match_mode": "any",
+        "min_rating": null
+      },
+      "trigger_condition": null
+    },
+    {
+      "mission_id": "PERSPECTIVE_UNEXPECTED_ANGLE",
+      "category": "perspective",
+      "skill_path": "observer",
+      "hidden_name": "Unexpected Angle",
+      "player_hint": "An angle you've never shot from before",
+      "difficulty": "rare",
+      "xp": 40,
+      "pool": "core",
+      "active": false,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "unexpected_angle"
+        ],
+        "match_mode": "any",
+        "min_rating": null
+      },
+      "trigger_condition": null
+    },
+    {
+      "mission_id": "PERSPECTIVE_VERTIGO_SHOT",
+      "category": "perspective",
+      "skill_path": "observer",
+      "hidden_name": "Vertigo Shot",
+      "player_hint": "A perspective that makes the scene feel tall or steep",
+      "difficulty": "rare",
+      "xp": 40,
+      "pool": "core",
+      "active": false,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "vertigo_shot"
+        ],
+        "match_mode": "any",
+        "min_rating": null
+      },
+      "trigger_condition": null
+    },
+    {
+      "mission_id": "PERSPECTIVE_LAYERS_FROM_ONE_SPOT",
+      "category": "perspective",
+      "skill_path": "observer",
+      "hidden_name": "Layers From One Spot",
+      "player_hint": "Without moving your feet, find three different framings",
+      "difficulty": "rare",
+      "xp": 40,
+      "pool": "core",
+      "active": false,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "layers_from_one_spot"
+        ],
+        "match_mode": "any",
+        "min_rating": null
+      },
+      "trigger_condition": null
+    },
+    {
+      "mission_id": "PERSPECTIVE_UPSIDE_DOWN_WORLD",
+      "category": "perspective",
+      "skill_path": "observer",
+      "hidden_name": "Upside Down World",
+      "player_hint": "Flip your usual view (crouch, tilt, reflect)",
+      "difficulty": "rare",
+      "xp": 40,
+      "pool": "core",
+      "active": false,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "upside_down_world"
+        ],
+        "match_mode": "any",
+        "min_rating": null
+      },
+      "trigger_condition": null
+    },
+    {
+      "mission_id": "PERSPECTIVE_SYMMETRY_FROM_ABOVE",
+      "category": "perspective",
+      "skill_path": "observer",
+      "hidden_name": "Symmetry From Above",
+      "player_hint": "Shoot straight down at a symmetrical scene",
+      "difficulty": "legendary",
+      "xp": 80,
+      "pool": "core",
+      "active": false,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "symmetry_from_above"
+        ],
+        "match_mode": "any",
+        "min_rating": 4
+      },
+      "trigger_condition": null
+    },
+    {
+      "mission_id": "PERSPECTIVE_THE_OVERLOOKED_ANGLE",
+      "category": "perspective",
+      "skill_path": "observer",
+      "hidden_name": "The Overlooked Angle",
+      "player_hint": "The angle everyone else walks past without noticing",
+      "difficulty": "legendary",
+      "xp": 80,
+      "pool": "core",
+      "active": false,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "the_overlooked_angle"
+        ],
+        "match_mode": "any",
+        "min_rating": 4
+      },
+      "trigger_condition": null
+    },
+    {
+      "mission_id": "PERSPECTIVE_NEW_EYES",
+      "category": "perspective",
+      "skill_path": "observer",
+      "hidden_name": "New Eyes",
+      "player_hint": "Photograph a familiar place like you've never seen it before",
+      "difficulty": "legendary",
+      "xp": 80,
+      "pool": "core",
+      "active": false,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "new_eyes"
+        ],
+        "match_mode": "any",
+        "min_rating": 4
+      },
+      "trigger_condition": null
+    },
+    {
+      "mission_id": "PERSPECTIVE_TRUE_EMPATHY_ANGLE",
+      "category": "perspective",
+      "skill_path": "observer",
+      "hidden_name": "True Empathy Angle",
+      "player_hint": "Match the exact eye-level of a genuinely non-human subject",
+      "difficulty": "legendary",
+      "xp": 80,
+      "pool": "core",
+      "active": false,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "true_empathy_angle"
+        ],
+        "match_mode": "any",
+        "min_rating": 4
+      },
+      "trigger_condition": null
+    },
+    {
+      "mission_id": "EMOTION_CALM",
+      "category": "emotion",
+      "skill_path": "storyteller",
+      "hidden_name": "Calm",
+      "player_hint": "Capture calm",
+      "difficulty": "common",
+      "xp": 10,
+      "pool": "core",
+      "active": true,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "calm"
+        ],
+        "match_mode": "any",
+        "min_rating": null
+      },
+      "trigger_condition": null
+    },
+    {
+      "mission_id": "EMOTION_COMFORT",
+      "category": "emotion",
+      "skill_path": "storyteller",
+      "hidden_name": "Comfort",
+      "player_hint": "Capture comfort",
+      "difficulty": "common",
+      "xp": 10,
+      "pool": "core",
+      "active": true,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "comfort"
+        ],
+        "match_mode": "any",
+        "min_rating": null
+      },
+      "trigger_condition": null
+    },
+    {
+      "mission_id": "EMOTION_JOY",
+      "category": "emotion",
+      "skill_path": "storyteller",
+      "hidden_name": "Joy",
+      "player_hint": "Capture joy",
+      "difficulty": "common",
+      "xp": 10,
+      "pool": "core",
+      "active": true,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "joy"
+        ],
+        "match_mode": "any",
+        "min_rating": null
+      },
+      "trigger_condition": null
+    },
+    {
+      "mission_id": "EMOTION_PLAYFULNESS",
+      "category": "emotion",
+      "skill_path": "storyteller",
+      "hidden_name": "Playfulness",
+      "player_hint": "Capture playfulness",
+      "difficulty": "common",
+      "xp": 10,
+      "pool": "core",
+      "active": true,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "playfulness"
+        ],
+        "match_mode": "any",
+        "min_rating": null
+      },
+      "trigger_condition": null
+    },
+    {
+      "mission_id": "EMOTION_CURIOSITY",
+      "category": "emotion",
+      "skill_path": "storyteller",
+      "hidden_name": "Curiosity",
+      "player_hint": "Capture curiosity",
+      "difficulty": "common",
+      "xp": 10,
+      "pool": "core",
+      "active": true,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "curiosity"
+        ],
+        "match_mode": "any",
+        "min_rating": null
+      },
+      "trigger_condition": null
+    },
+    {
+      "mission_id": "EMOTION_MYSTERY",
+      "category": "emotion",
+      "skill_path": "storyteller",
+      "hidden_name": "Mystery",
+      "player_hint": "Capture mystery",
+      "difficulty": "uncommon",
+      "xp": 20,
+      "pool": "core",
+      "active": true,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "mystery"
+        ],
+        "match_mode": "any",
+        "min_rating": null
+      },
+      "trigger_condition": null
+    },
+    {
+      "mission_id": "EMOTION_ENERGY",
+      "category": "emotion",
+      "skill_path": "storyteller",
+      "hidden_name": "Energy",
+      "player_hint": "Capture energy",
+      "difficulty": "uncommon",
+      "xp": 20,
+      "pool": "core",
+      "active": true,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "energy"
+        ],
+        "match_mode": "any",
+        "min_rating": null
+      },
+      "trigger_condition": null
+    },
+    {
+      "mission_id": "EMOTION_FRESH_START",
+      "category": "emotion",
+      "skill_path": "storyteller",
+      "hidden_name": "Fresh Start",
+      "player_hint": "Capture a fresh start",
+      "difficulty": "uncommon",
+      "xp": 20,
+      "pool": "core",
+      "active": true,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "fresh_start"
+        ],
+        "match_mode": "any",
+        "min_rating": null
+      },
+      "trigger_condition": null
+    },
+    {
+      "mission_id": "EMOTION_ANTICIPATION",
+      "category": "emotion",
+      "skill_path": "storyteller",
+      "hidden_name": "Anticipation",
+      "player_hint": "Capture anticipation",
+      "difficulty": "uncommon",
+      "xp": 20,
+      "pool": "core",
+      "active": true,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "anticipation"
+        ],
+        "match_mode": "any",
+        "min_rating": null
+      },
+      "trigger_condition": null
+    },
+    {
+      "mission_id": "EMOTION_WONDER",
+      "category": "emotion",
+      "skill_path": "storyteller",
+      "hidden_name": "Wonder",
+      "player_hint": "Capture wonder",
+      "difficulty": "uncommon",
+      "xp": 20,
+      "pool": "core",
+      "active": true,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "wonder"
+        ],
+        "match_mode": "any",
+        "min_rating": null
+      },
+      "trigger_condition": null
+    },
+    {
+      "mission_id": "EMOTION_SAFETY",
+      "category": "emotion",
+      "skill_path": "storyteller",
+      "hidden_name": "Safety",
+      "player_hint": "Capture the feeling of being safe",
+      "difficulty": "uncommon",
+      "xp": 20,
+      "pool": "core",
+      "active": true,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "safety"
+        ],
+        "match_mode": "any",
+        "min_rating": null
+      },
+      "trigger_condition": null
+    },
+    {
+      "mission_id": "EMOTION_HOME",
+      "category": "emotion",
+      "skill_path": "storyteller",
+      "hidden_name": "Home",
+      "player_hint": "Capture the feeling of home",
+      "difficulty": "uncommon",
+      "xp": 20,
+      "pool": "core",
+      "active": true,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "home"
+        ],
+        "match_mode": "any",
+        "min_rating": null
+      },
+      "trigger_condition": null
+    },
+    {
+      "mission_id": "EMOTION_STILLNESS",
+      "category": "emotion",
+      "skill_path": "storyteller",
+      "hidden_name": "Stillness",
+      "player_hint": "Capture stillness",
+      "difficulty": "uncommon",
+      "xp": 20,
+      "pool": "core",
+      "active": true,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "stillness"
+        ],
+        "match_mode": "any",
+        "min_rating": null
+      },
+      "trigger_condition": null
+    },
+    {
+      "mission_id": "EMOTION_SOLITUDE",
+      "category": "emotion",
+      "skill_path": "storyteller",
+      "hidden_name": "Solitude",
+      "player_hint": "Capture solitude",
+      "difficulty": "rare",
+      "xp": 40,
+      "pool": "core",
+      "active": false,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "solitude"
+        ],
+        "match_mode": "any",
+        "min_rating": null
+      },
+      "trigger_condition": null
+    },
+    {
+      "mission_id": "EMOTION_NOSTALGIA",
+      "category": "emotion",
+      "skill_path": "storyteller",
+      "hidden_name": "Nostalgia",
+      "player_hint": "Capture nostalgia",
+      "difficulty": "rare",
+      "xp": 40,
+      "pool": "core",
+      "active": false,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "nostalgia"
+        ],
+        "match_mode": "any",
+        "min_rating": null
+      },
+      "trigger_condition": null
+    },
+    {
+      "mission_id": "EMOTION_TENSION",
+      "category": "emotion",
+      "skill_path": "storyteller",
+      "hidden_name": "Tension",
+      "player_hint": "Capture tension",
+      "difficulty": "rare",
+      "xp": 40,
+      "pool": "core",
+      "active": false,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "tension"
+        ],
+        "match_mode": "any",
+        "min_rating": null
+      },
+      "trigger_condition": null
+    },
+    {
+      "mission_id": "EMOTION_RELIEF",
+      "category": "emotion",
+      "skill_path": "storyteller",
+      "hidden_name": "Relief",
+      "player_hint": "Capture relief",
+      "difficulty": "rare",
+      "xp": 40,
+      "pool": "core",
+      "active": false,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "relief"
+        ],
+        "match_mode": "any",
+        "min_rating": null
+      },
+      "trigger_condition": null
+    },
+    {
+      "mission_id": "EMOTION_EMOTIONAL_WARMTH",
+      "category": "emotion",
+      "skill_path": "storyteller",
+      "hidden_name": "Emotional Warmth",
+      "player_hint": "Capture warmth between people or things",
+      "difficulty": "rare",
+      "xp": 40,
+      "pool": "core",
+      "active": false,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "emotional_warmth"
+        ],
+        "match_mode": "any",
+        "min_rating": null
+      },
+      "trigger_condition": null
+    },
+    {
+      "mission_id": "EMOTION_MELANCHOLY",
+      "category": "emotion",
+      "skill_path": "storyteller",
+      "hidden_name": "Melancholy",
+      "player_hint": "Capture a gentle sadness",
+      "difficulty": "rare",
+      "xp": 40,
+      "pool": "core",
+      "active": false,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "melancholy"
+        ],
+        "match_mode": "any",
+        "min_rating": null
+      },
+      "trigger_condition": null
+    },
+    {
+      "mission_id": "EMOTION_AWE",
+      "category": "emotion",
+      "skill_path": "storyteller",
+      "hidden_name": "Awe",
+      "player_hint": "Capture awe",
+      "difficulty": "rare",
+      "xp": 40,
+      "pool": "core",
+      "active": false,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "awe"
+        ],
+        "match_mode": "any",
+        "min_rating": null
+      },
+      "trigger_condition": null
+    },
+    {
+      "mission_id": "EMOTION_GRATITUDE",
+      "category": "emotion",
+      "skill_path": "storyteller",
+      "hidden_name": "Gratitude",
+      "player_hint": "Capture gratitude",
+      "difficulty": "rare",
+      "xp": 40,
+      "pool": "core",
+      "active": false,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "gratitude"
+        ],
+        "match_mode": "any",
+        "min_rating": null
+      },
+      "trigger_condition": null
+    },
+    {
+      "mission_id": "EMOTION_A_FEELING_YOU_CAN_T_NAME",
+      "category": "emotion",
+      "skill_path": "storyteller",
+      "hidden_name": "A Feeling You Can't Name",
+      "player_hint": "Capture a feeling you can't quite name",
+      "difficulty": "legendary",
+      "xp": 80,
+      "pool": "core",
+      "active": false,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "a_feeling_you_can_t_name"
+        ],
+        "match_mode": "any",
+        "min_rating": 4
+      },
+      "trigger_condition": null
+    },
+    {
+      "mission_id": "EMOTION_PEAK_EXCITEMENT",
+      "category": "emotion",
+      "skill_path": "storyteller",
+      "hidden_name": "Peak Excitement",
+      "player_hint": "Capture excitement at its absolute peak moment",
+      "difficulty": "legendary",
+      "xp": 80,
+      "pool": "core",
+      "active": false,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "peak_excitement"
+        ],
+        "match_mode": "any",
+        "min_rating": 4
+      },
+      "trigger_condition": null
+    },
+    {
+      "mission_id": "EMOTION_BOUNDLESS",
+      "category": "emotion",
+      "skill_path": "storyteller",
+      "hidden_name": "Boundless",
+      "player_hint": "Capture freedom so complete it feels like flight",
+      "difficulty": "legendary",
+      "xp": 80,
+      "pool": "core",
+      "active": false,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "boundless"
+        ],
+        "match_mode": "any",
+        "min_rating": 4
+      },
+      "trigger_condition": null
+    },
+    {
+      "mission_id": "EMOTION_FOUND_FAMILY",
+      "category": "emotion",
+      "skill_path": "storyteller",
+      "hidden_name": "Found Family",
+      "player_hint": "Capture belonging without showing a single person's face",
+      "difficulty": "legendary",
+      "xp": 80,
+      "pool": "core",
+      "active": false,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "found_family"
+        ],
+        "match_mode": "any",
+        "min_rating": 4
+      },
+      "trigger_condition": null
+    },
+    {
+      "mission_id": "SPECIAL_PUDDLE_WORLD",
+      "category": "special_pool",
+      "skill_path": "master_photographer",
+      "hidden_name": "Puddle World",
+      "player_hint": "Find a reflection in a puddle",
+      "difficulty": "uncommon",
+      "xp": 20,
+      "pool": "special",
+      "active": false,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "puddle_world"
+        ],
+        "match_mode": "any",
+        "min_rating": null
+      },
+      "trigger_condition": null
+    },
+    {
+      "mission_id": "SPECIAL_LAST_LIGHT",
+      "category": "special_pool",
+      "skill_path": "master_photographer",
+      "hidden_name": "Last Light",
+      "player_hint": "Capture the last sunlight before sunset",
+      "difficulty": "rare",
+      "xp": 40,
+      "pool": "special",
+      "active": false,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "last_light"
+        ],
+        "match_mode": "any",
+        "min_rating": null
+      },
+      "trigger_condition": "time_window:golden_hour"
+    },
+    {
+      "mission_id": "SPECIAL_AFTER_THE_RAIN",
+      "category": "special_pool",
+      "skill_path": "master_photographer",
+      "hidden_name": "After the Rain",
+      "player_hint": "Photograph the world right after rain",
+      "difficulty": "rare",
+      "xp": 40,
+      "pool": "special",
+      "active": false,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "after_the_rain"
+        ],
+        "match_mode": "any",
+        "min_rating": null
+      },
+      "trigger_condition": "weather:rain_recent"
+    },
+    {
+      "mission_id": "SPECIAL_TINY_VISITOR",
+      "category": "special_pool",
+      "skill_path": "master_photographer",
+      "hidden_name": "Tiny Visitor",
+      "player_hint": "Photograph an insect",
+      "difficulty": "rare",
+      "xp": 40,
+      "pool": "special",
+      "active": false,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "tiny_visitor"
+        ],
+        "match_mode": "any",
+        "min_rating": null
+      },
+      "trigger_condition": null
+    },
+    {
+      "mission_id": "SPECIAL_SIGN_OF_THE_SEASON",
+      "category": "special_pool",
+      "skill_path": "master_photographer",
+      "hidden_name": "Sign of the Season",
+      "player_hint": "Find evidence of the current season",
+      "difficulty": "rare",
+      "xp": 40,
+      "pool": "special",
+      "active": false,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "sign_of_the_season"
+        ],
+        "match_mode": "any",
+        "min_rating": null
+      },
+      "trigger_condition": "season:any"
+    },
+    {
+      "mission_id": "SPECIAL_FOG_WALKER",
+      "category": "special_pool",
+      "skill_path": "master_photographer",
+      "hidden_name": "Fog Walker",
+      "player_hint": "Capture a scene in fog or mist",
+      "difficulty": "rare",
+      "xp": 40,
+      "pool": "special",
+      "active": false,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "fog_walker"
+        ],
+        "match_mode": "any",
+        "min_rating": null
+      },
+      "trigger_condition": "weather:fog"
+    },
+    {
+      "mission_id": "SPECIAL_GOLDEN_LEAF",
+      "category": "special_pool",
+      "skill_path": "master_photographer",
+      "hidden_name": "Golden Leaf",
+      "player_hint": "Capture a single falling or fallen autumn leaf",
+      "difficulty": "rare",
+      "xp": 40,
+      "pool": "special",
+      "active": false,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "golden_leaf"
+        ],
+        "match_mode": "any",
+        "min_rating": null
+      },
+      "trigger_condition": "season:autumn"
+    },
+    {
+      "mission_id": "SPECIAL_MIDNIGHT_WATCH",
+      "category": "special_pool",
+      "skill_path": "master_photographer",
+      "hidden_name": "Midnight Watch",
+      "player_hint": "Take a photo after midnight",
+      "difficulty": "rare",
+      "xp": 40,
+      "pool": "special",
+      "active": false,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "midnight_watch"
+        ],
+        "match_mode": "any",
+        "min_rating": null
+      },
+      "trigger_condition": "time_window:after_midnight"
+    },
+    {
+      "mission_id": "SPECIAL_FULL_MOON",
+      "category": "special_pool",
+      "skill_path": "master_photographer",
+      "hidden_name": "Full Moon",
+      "player_hint": "Photograph the moon",
+      "difficulty": "rare",
+      "xp": 40,
+      "pool": "special",
+      "active": false,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "full_moon"
+        ],
+        "match_mode": "any",
+        "min_rating": null
+      },
+      "trigger_condition": "time_window:night"
+    },
+    {
+      "mission_id": "SPECIAL_SNAP_OF_SPRING",
+      "category": "special_pool",
+      "skill_path": "master_photographer",
+      "hidden_name": "Snap of Spring",
+      "player_hint": "Capture new growth (buds, blossoms, new leaves)",
+      "difficulty": "rare",
+      "xp": 40,
+      "pool": "special",
+      "active": false,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "snap_of_spring"
+        ],
+        "match_mode": "any",
+        "min_rating": null
+      },
+      "trigger_condition": "season:spring"
+    },
+    {
+      "mission_id": "SPECIAL_HARVEST_TIME",
+      "category": "special_pool",
+      "skill_path": "master_photographer",
+      "hidden_name": "Harvest Time",
+      "player_hint": "Capture something being gathered, picked, or harvested",
+      "difficulty": "rare",
+      "xp": 40,
+      "pool": "special",
+      "active": false,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "harvest_time"
+        ],
+        "match_mode": "any",
+        "min_rating": null
+      },
+      "trigger_condition": null
+    },
+    {
+      "mission_id": "SPECIAL_DOUBLE_REFLECTION",
+      "category": "special_pool",
+      "skill_path": "master_photographer",
+      "hidden_name": "Double Reflection",
+      "player_hint": "Find two reflections in one image",
+      "difficulty": "legendary",
+      "xp": 80,
+      "pool": "special",
+      "active": false,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "double_reflection"
+        ],
+        "match_mode": "any",
+        "min_rating": null
+      },
+      "trigger_condition": null
+    },
+    {
+      "mission_id": "SPECIAL_BLUE_HOUR",
+      "category": "special_pool",
+      "skill_path": "master_photographer",
+      "hidden_name": "Blue Hour",
+      "player_hint": "Capture the blue hour (just after sunset/before sunrise)",
+      "difficulty": "legendary",
+      "xp": 80,
+      "pool": "special",
+      "active": false,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "blue_hour"
+        ],
+        "match_mode": "any",
+        "min_rating": null
+      },
+      "trigger_condition": "time_window:blue_hour"
+    },
+    {
+      "mission_id": "SPECIAL_PERFECT_TIMING",
+      "category": "special_pool",
+      "skill_path": "master_photographer",
+      "hidden_name": "Perfect Timing",
+      "player_hint": "Capture a moment of perfect timing",
+      "difficulty": "legendary",
+      "xp": 80,
+      "pool": "special",
+      "active": false,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "perfect_timing"
+        ],
+        "match_mode": "any",
+        "min_rating": null
+      },
+      "trigger_condition": null
+    },
+    {
+      "mission_id": "SPECIAL_OVERLOOKED_BEAUTY",
+      "category": "special_pool",
+      "skill_path": "master_photographer",
+      "hidden_name": "Overlooked Beauty",
+      "player_hint": "Photograph beauty people usually ignore",
+      "difficulty": "legendary",
+      "xp": 80,
+      "pool": "special",
+      "active": false,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "overlooked_beauty"
+        ],
+        "match_mode": "any",
+        "min_rating": null
+      },
+      "trigger_condition": null
+    },
+    {
+      "mission_id": "SPECIAL_FIRST_FROST",
+      "category": "special_pool",
+      "skill_path": "master_photographer",
+      "hidden_name": "First Frost",
+      "player_hint": "Capture the first sign of frost or cold weather",
+      "difficulty": "legendary",
+      "xp": 80,
+      "pool": "special",
+      "active": false,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "first_frost"
+        ],
+        "match_mode": "any",
+        "min_rating": null
+      },
+      "trigger_condition": "weather:frost"
+    },
+    {
+      "mission_id": "SPECIAL_STORM_S_EDGE",
+      "category": "special_pool",
+      "skill_path": "master_photographer",
+      "hidden_name": "Storm's Edge",
+      "player_hint": "Photograph the sky just before or after a storm",
+      "difficulty": "legendary",
+      "xp": 80,
+      "pool": "special",
+      "active": false,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "storm_s_edge"
+        ],
+        "match_mode": "any",
+        "min_rating": null
+      },
+      "trigger_condition": "weather:storm"
+    },
+    {
+      "mission_id": "SPECIAL_HEAT_SHIMMER",
+      "category": "special_pool",
+      "skill_path": "master_photographer",
+      "hidden_name": "Heat Shimmer",
+      "player_hint": "Capture visible heat or haze on a hot day",
+      "difficulty": "legendary",
+      "xp": 80,
+      "pool": "special",
+      "active": false,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "heat_shimmer"
+        ],
+        "match_mode": "any",
+        "min_rating": null
+      },
+      "trigger_condition": "weather:heat"
+    },
+    {
+      "mission_id": "SPECIAL_STAR_LIGHT",
+      "category": "special_pool",
+      "skill_path": "master_photographer",
+      "hidden_name": "Star Light",
+      "player_hint": "Capture a star or the night sky",
+      "difficulty": "legendary",
+      "xp": 80,
+      "pool": "special",
+      "active": false,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "star_light"
+        ],
+        "match_mode": "any",
+        "min_rating": null
+      },
+      "trigger_condition": "time_window:night"
+    },
+    {
+      "mission_id": "SPECIAL_MIGRATION_MOMENT",
+      "category": "special_pool",
+      "skill_path": "master_photographer",
+      "hidden_name": "Migration Moment",
+      "player_hint": "Photograph a bird or animal in transit",
+      "difficulty": "legendary",
+      "xp": 80,
+      "pool": "special",
+      "active": false,
+      "criteria": {
+        "type": "tag_match",
+        "required_tags": [
+          "migration_moment"
+        ],
+        "match_mode": "any",
+        "min_rating": null
+      },
+      "trigger_condition": null
+    }
+  ],
+  "achievements": [
+    {
+      "achievement_id": "straight_flush",
+      "name": "Straight Flush!",
+      "description": "Get one photo at each rating 1-5 stars in a single session.",
+      "criteria": {
+        "type": "session_pattern",
+        "pattern": "ratings_1_through_5_in_session"
+      }
+    },
+    {
+      "achievement_id": "golden_hour_streak",
+      "name": "Golden Hour",
+      "description": "3 photos rated 5 stars in one day.",
+      "criteria": {
+        "type": "count_in_window",
+        "min_rating": 5,
+        "count": 3,
+        "window": "day"
+      }
+    },
+    {
+      "achievement_id": "redemption_arc",
+      "name": "Redemption Arc",
+      "description": "Retake a photo and improve its rating by 2+ stars.",
+      "criteria": {
+        "type": "rating_improvement",
+        "min_improvement": 2
+      }
+    },
+    {
+      "achievement_id": "jack_of_all_trades",
+      "name": "Jack of All Trades",
+      "description": "Submit at least one photo in every category_tag.",
+      "criteria": {
+        "type": "category_tag_coverage"
+      }
+    },
+    {
+      "achievement_id": "speedrunner",
+      "name": "Speedrunner",
+      "description": "Complete a full difficulty tier within a category in under 24 hours.",
+      "criteria": {
+        "type": "tier_completion_speed",
+        "window_hours": 24
+      }
+    },
+    {
+      "achievement_id": "picture_perfect",
+      "name": "Picture Perfect",
+      "description": "A batch where every photo scores 4 stars or higher.",
+      "criteria": {
+        "type": "batch_all_min_rating",
+        "min_rating": 4
+      }
+    },
+    {
+      "achievement_id": "the_collector",
+      "name": "The Collector",
+      "description": "Unlock every badge in a single category's difficulty tier.",
+      "criteria": {
+        "type": "tier_full_clear"
+      }
+    },
+    {
+      "achievement_id": "no_filter_needed",
+      "name": "No Filter Needed",
+      "description": "A 'keep' verdict with a 5-star rating.",
+      "criteria": {
+        "type": "verdict_rating_combo",
+        "next_action": "keep",
+        "min_rating": 5
+      }
+    },
+    {
+      "achievement_id": "comeback_kid",
+      "name": "Comeback Kid",
+      "description": "Go from a 'retake' verdict to a 'keep' verdict on the same subject within a day.",
+      "criteria": {
+        "type": "verdict_transition",
+        "from": "retake",
+        "to": "keep",
+        "window": "day"
+      }
+    }
+  ]
+}
