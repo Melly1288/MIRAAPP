@@ -43,7 +43,11 @@ def default_mission_state() -> dict:
         "session_ratings": [],  # ratings seen in the current session, for achievements like Straight Flush
         "category_tags_seen": [],  # for Jack of All Trades
         "last_verdict_by_subject": None,  # simplistic placeholder for Comeback Kid-style tracking (future)
+        "active_mission_ids": [],  # up to MAX_ACTIVE_MISSIONS user-selected "tracked" missions (hybrid model)
     }
+
+
+MAX_ACTIVE_MISSIONS = 3
 
 
 def _mission_criteria_met(mission: dict, submission: dict) -> bool:
@@ -94,6 +98,7 @@ def evaluate_submission(mission_state: Optional[dict], submission: dict) -> Dict
     state.setdefault("skill_path_xp", {p: 0 for p in MISSIONS_DATA["skill_paths"]})
     state.setdefault("session_ratings", [])
     state.setdefault("category_tags_seen", [])
+    state.setdefault("active_mission_ids", [])
 
     newly_completed = []
     xp_awarded = 0
@@ -102,17 +107,23 @@ def evaluate_submission(mission_state: Optional[dict], submission: dict) -> Dict
         if mission["mission_id"] in state["completed_mission_ids"]:
             continue  # each mission completes once (v1 — repeatable missions can be a later addition)
         if _mission_criteria_met(mission, submission):
+            was_tracked = mission["mission_id"] in state["active_mission_ids"]
             state["completed_mission_ids"].append(mission["mission_id"])
             state["skill_path_xp"][mission["skill_path"]] = (
                 state["skill_path_xp"].get(mission["skill_path"], 0) + mission["xp"]
             )
             xp_awarded += mission["xp"]
+            if was_tracked:
+                # Free up the tracking slot automatically - it's done, no
+                # reason to keep occupying one of the user's 3 slots.
+                state["active_mission_ids"].remove(mission["mission_id"])
             newly_completed.append({
                 "mission_id": mission["mission_id"],
                 "hidden_name": mission["hidden_name"],
                 "difficulty": mission["difficulty"],
                 "xp": mission["xp"],
                 "skill_path": mission["skill_path"],
+                "was_tracked": was_tracked,
             })
 
     # lightweight bookkeeping for achievement checks
