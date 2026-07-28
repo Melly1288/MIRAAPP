@@ -424,6 +424,10 @@ async def get_feedback(photo: UploadFile = File(...)):
     for attempt in (1, 2):
         try:
             feedback = request_feedback_once(image_b64, media_type)
+            logger.info(
+                "mission_tags for this submission: %s",
+                feedback.get("mission_tags", []),
+            )
             return FeedbackResponse(**feedback)
         except (anthropic.APIError, ValueError) as exc:
             last_error = exc
