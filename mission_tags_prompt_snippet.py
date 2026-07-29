@@ -9,6 +9,12 @@ This field is used for a separate gamified mission-tracking feature and
 must never influence your rating, verdict, or next_action - grade the
 photo's quality exactly as you already do, then separately note which of
 these descriptive tags apply, independent of whether the photo is good.
+IMPORTANT: a messy, cluttered, or poorly-composed photo can still contain
+a tagged quality clearly. If the photo shows a round object, a matching
+pair, a stack, or any other listed quality - tag it, even if the overall
+composition is bad, the background is distracting, or your verdict is
+critical. Do not let a low rating or critical verdict make you more
+conservative about applying tags - the two judgments are independent.
 Your verdict must still stay under 220 characters exactly as instructed
 above - this mission-tagging addition changes nothing about that limit.
 
